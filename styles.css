@@ -115,3 +115,58 @@ main {
     font-weight: 600;
     font-size: 1.1rem;
 }
+/* =========================
+   NAVEGACIÓN - JAVIER
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 5%;
+    background-color: #ffffff;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #8b5a2b;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.nav-links a:hover {
+    color: #8b5a2b;
+}
+
+
+/* NAVEGACIÓN EN MÓVIL */
+
+@media (max-width: 767px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+    }
+}
