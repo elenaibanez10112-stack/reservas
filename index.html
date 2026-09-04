@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Reservas - Castillo de la Guardia</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
 
     <header>
+<<<<<<< HEAD
     <header>
     <nav class="navbar">
 
@@ -37,85 +36,52 @@
     <h1>Castillo de la Guardia</h1>
     <h2>Formulario de Reserva de Entradas</h2>
 </header>
+=======
+        <h1>Castillo de la Guardia</h1>
+        <h2>Formulario de Reserva de Entradas</h2>
+        <!-- Barra de navegación semántica del Sprint 4 -->
+        <nav style="margin-top: 15px;">
+            <a href="listado.html" style="font-weight: bold; text-decoration: underline;">&rarr; Ver Espacios Disponibles del Castillo (Listado)</a>
+        </nav>
+>>>>>>> main
     </header>
 
     <main>
-
-        <!-- Sección del formulario principal -->
+        <!-- Sección del Formulario principal -->
         <section id="seccion-reserva">
-
             <form id="form-reserva" action="#" method="POST">
-
+                
                 <div class="input-group">
                     <label for="nombre">Nombre Completo:</label>
-                    <input
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        required
-                        placeholder="Ej. Juan Pérez">
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
                 </div>
 
                 <div class="input-group">
                     <label for="correo">Correo Electrónico:</label>
-                    <input
-                        type="email"
-                        id="correo"
-                        name="correo"
-                        required
-                        placeholder="ejemplo@correo.com">
+                    <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com">
                 </div>
 
                 <div class="input-group">
-                    <label for="asistentes">
-                        Número de asistentes (Máximo 5):
-                    </label>
-                    <input
-                        type="number"
-                        id="asistentes"
-                        name="asistentes"
-                        min="1"
-                        max="5"
-                        required>
+                    <label for="asistentes">Número de asistentes (Máximo 5):</label>
+                    <input type="number" id="asistentes" name="asistentes" min="1" max="5" required>
                 </div>
 
-                <button type="submit" id="btn-enviar">
-                    Confirmar Reserva
-                </button>
-
+                <button type="submit" id="btn-enviar">Confirmar Reserva</button>
             </form>
-
         </section>
-
+        
         <!-- Mensaje de confirmación -->
         <section id="mensaje-confirmacion">
             <p>¡Reserva procesada!</p>
         </section>
 
-        <!-- Aportación del compañero -->
         <article>
             <h3>Visitas Guiadas Nocturnas al Castillo</h3>
-            <p>
-                Disfruta de una experiencia única recorriendo
-                las almenas bajo las estrellas.
-            </p>
+            <p>Disfruta de una experiencia única recorriendo las almenas bajo las estrellas.</p>
         </article>
-
-        <!-- Aportación de Javier -->
-        <section id="informacion-visita">
-            <h2>Visitas guiadas al Castillo</h2>
-            <p>
-                Descubre la historia del Castillo de la Guardia mediante
-                nuestras visitas guiadas. Consulta la disponibilidad
-                y realiza tu reserva.
-            </p>
-        </section>
-
     </main>
 
     <!-- Vinculación de la lógica -->
     <script src="js/app.js"></script>
-
 </body>
-
 </html>

@@ -1,172 +1,21 @@
 /* Configuración General y Colores del Castillo */
 :root {
-    --color-principal: #2c3e50; /* Azul oscuro */
-    --color-secundario: #b89150; /* Dorado medieval */
+    --color-principal: #2c3e50;
+    --color-secundario: #b89150;
     --color-fondo: #f4f6f8;
     --color-tarjeta: #ffffff;
     --color-texto: #333333;
 }
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-header h1 {
-    color: var(--color-principal);
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-header h2 {
-    color: var(--color-secundario);
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
-main {
-    width: 100%;
-    max-width: 500px;
-}
-
-#seccion-reserva, #mensaje-confirmacion {
-    background-color: var(--color-tarjeta);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    border-top: 5px solid var(--color-secundario);
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--color-principal);
-    font-size: 0.95rem;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1.5px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.input-group input:focus {
-    outline: none;
-    border-color: var(--color-principal);
-    box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.15);
-}
-
-#btn-enviar {
-    width: 100%;
-    padding: 14px;
-    background-color: var(--color-principal);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-#btn-enviar:hover {
-    background-color: #1a252f;
-}
-
-#btn-enviar:active {
-    transform: scale(0.98);
-}
-
-#mensaje-confirmacion {
-    text-align: center;
-    border-top-color: #27ae60;
-}
-
-#mensaje-confirmacion p {
-    color: #27ae60;
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-/* =========================
-   NAVEGACIÓN - JAVIER
-========================= */
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 1rem 5%;
-    background-color: #ffffff;
-}
-
-.logo {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #8b5a2b;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #222222;
-}
-
-.nav-links a:hover {
-    color: #8b5a2b;
-}
-
-
-/* NAVEGACIÓN EN MÓVIL */
-
-@media (max-width: 767px) {
-
-    .navbar {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 0.75rem;
-        text-align: center;
-    }
-}
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+body { background-color: var(--color-fondo); color: var(--color-texto); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+header { text-align: center; margin-bottom: 30px; }
+header h1 { color: var(--color-principal); font-size: 2.5rem; text-transform: uppercase; }
+header h2 { color: var(--color-secundario); font-size: 1.2rem; }
+main { width: 100%; max-width: 500px; }
+#seccion-reserva, #mensaje-confirmacion { background-color: var(--color-tarjeta); padding: 30px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); border-top: 5px solid var(--color-secundario); }
+.input-group { margin-bottom: 20px; }
+.input-group label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--color-principal); }
+.input-group input { width: 100%; padding: 12px; border: 1.5px solid #ccc; border-radius: 6px; }
+#btn-enviar { width: 100%; padding: 14px; background-color: var(--color-principal); color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; }
+#mensaje-confirmacion { text-align: center; border-top-color: #27ae60; }
+#mensaje-confirmacion p { color: #27ae60; font-weight: 600; }
