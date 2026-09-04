@@ -64,3 +64,179 @@ article {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+/* ============================================================
+   css/grid.css
+   Estilos de CSS Grid para el proyecto "Castillo de la Guardia".
+   Se enlaza DESPUÉS de css/styles.css para poder ajustar layout
+   sin tocar los estilos generales ya definidos.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1) Listado de espacios (listado.html)
+   La lista <ul> pasa de apilarse verticalmente a organizarse
+   en una cuadrícula que se adapta al ancho de pantalla.
+   ------------------------------------------------------------ */
+.listado-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+.listado-grid__item article {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 0.5rem;
+  border: 1px solid #c9b37c;      /* tono piedra/dorado, ajustable a la paleta real */
+  border-radius: 6px;
+  padding: 1.25rem;
+  background: #fdfaf3;
+}
+
+.listado-grid__item h3 {
+  margin: 0;
+}
+
+.listado-grid__item p {
+  margin: 0;
+  color: #555;
+}
+
+.listado-grid__item a {
+  align-self: end;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .listado-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------------
+   2) Panel de administración (boceto)
+   Estructura de página con Grid: cabecera, menú lateral y
+   contenido principal con tarjetas de resumen.
+   ------------------------------------------------------------ */
+.admin-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 64px 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+  min-height: 100vh;
+}
+
+.admin-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid #c9b37c;
+}
+
+.admin-sidebar {
+  grid-area: sidebar;
+  background: #2c2a24;
+  color: #f1e9d2;
+  padding: 1.5rem 1rem;
+}
+
+.admin-sidebar nav {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.admin-sidebar a {
+  color: #d8cba9;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+}
+
+.admin-sidebar a:hover,
+.admin-sidebar a:focus-visible {
+  background: #46422f;
+  color: #fff;
+}
+
+.admin-main {
+  grid-area: main;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-rows: auto 1fr;
+}
+
+.admin-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.summary-card {
+  border: 1px solid #c9b37c;
+  border-radius: 6px;
+  padding: 1rem;
+  display: grid;
+  gap: 0.25rem;
+  background: #fdfaf3;
+}
+
+.summary-card strong {
+  font-size: 1.4rem;
+}
+
+.summary-card span {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.admin-table {
+  border: 1px solid #c9b37c;
+  border-radius: 6px;
+  overflow: hidden;
+  display: grid;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 100px;
+  padding: 0.75rem 1rem;
+  align-items: center;
+}
+
+.table-row.header {
+  background: #f1e9d2;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.table-row + .table-row {
+  border-top: 1px solid #e6dcc0;
+}
+
+@media (max-width: 700px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main";
+  }
+
+  .admin-sidebar nav {
+    grid-auto-flow: column;
+    overflow-x: auto;
+  }
+
+  .table-row {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0.25rem;
+  }
+}
