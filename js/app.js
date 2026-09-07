@@ -101,4 +101,3 @@ function eliminarReserva(id) {
     const reservas = obtenerReservas().filter(r => r.id !== id);
     guardarReservas(reservas);
 }
-});
