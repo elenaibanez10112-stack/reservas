@@ -1,69 +1,12 @@
+/* Configuración General y Colores del Castillo */
 :root {
-    --color-deportivo: #e74c3c; 
-    --color-castillo: #f39c12;   
-    --color-salas: #2ecc71;      
     --color-principal: #2c3e50;
-    --color-fondo: #f8f9fa;
+    --color-secundario: #b89150;
+    --color-fondo: #f4f6f8;
+    --color-tarjeta: #ffffff;
     --color-texto: #333333;
-    --color-blanco: #ffffff;
-    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: var(--fuente-principal);
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    line-height: 1.6;
-}
-
-header {
-    background-color: var(--color-principal);
-    color: var(--color-blanco);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-}
-
-header nav {
-    display: flex;
-    gap: 1.5rem; 
-}
-
-header nav a {
-    color: var(--color-blanco);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-header nav a:hover {
-    background-color: var(--color-castillo); 
-}
-
-main ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-}
-
-article {
-    background-color: var(--color-blanco);
-    border-top: 5px solid var(--color-castillo); 
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+<<<<<<< HEAD
 /* ============================================================
    css/grid.css
    Estilos de CSS Grid para el proyecto "Castillo de la Guardia".
@@ -240,3 +183,18 @@ article {
     row-gap: 0.25rem;
   }
 }
+=======
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+body { background-color: var(--color-fondo); color: var(--color-texto); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+header { text-align: center; margin-bottom: 30px; }
+header h1 { color: var(--color-principal); font-size: 2.5rem; text-transform: uppercase; }
+header h2 { color: var(--color-secundario); font-size: 1.2rem; }
+main { width: 100%; max-width: 500px; }
+#seccion-reserva, #mensaje-confirmacion { background-color: var(--color-tarjeta); padding: 30px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); border-top: 5px solid var(--color-secundario); }
+.input-group { margin-bottom: 20px; }
+.input-group label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--color-principal); }
+.input-group input { width: 100%; padding: 12px; border: 1.5px solid #ccc; border-radius: 6px; }
+#btn-enviar { width: 100%; padding: 14px; background-color: var(--color-principal); color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; }
+#mensaje-confirmacion { text-align: center; border-top-color: #27ae60; }
+#mensaje-confirmacion p { color: #27ae60; font-weight: 600; }
+>>>>>>> grupo-2-javier
