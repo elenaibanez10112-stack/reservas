@@ -1,200 +1,296 @@
-/* Configuración General y Colores del Castillo */
+/* =========================================================
+   VARIABLES
+========================================================= */
+
 :root {
     --color-principal: #2c3e50;
     --color-secundario: #b89150;
     --color-fondo: #f4f6f8;
     --color-tarjeta: #ffffff;
     --color-texto: #333333;
-}
-<<<<<<< HEAD
-/* ============================================================
-   css/grid.css
-   Estilos de CSS Grid para el proyecto "Castillo de la Guardia".
-   Se enlaza DESPUÉS de css/styles.css para poder ajustar layout
-   sin tocar los estilos generales ya definidos.
-   ============================================================ */
+    --color-error: #c0392b;
+    --color-exito: #27ae60;
 
-/* ------------------------------------------------------------
-   1) Listado de espacios (listado.html)
-   La lista <ul> pasa de apilarse verticalmente a organizarse
-   en una cuadrícula que se adapta al ancho de pantalla.
-   ------------------------------------------------------------ */
-.listado-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
-  list-style: none;
-  margin: 1.5rem 0;
-  padding: 0;
+    --radio: 10px;
 }
 
-.listado-grid__item article {
-  height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: 0.5rem;
-  border: 1px solid #c9b37c;      /* tono piedra/dorado, ajustable a la paleta real */
-  border-radius: 6px;
-  padding: 1.25rem;
-  background: #fdfaf3;
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.listado-grid__item h3 {
-  margin: 0;
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    min-height: 100vh;
 }
 
-.listado-grid__item p {
-  margin: 0;
-  color: #555;
+
+/* =========================================================
+   NAVEGACIÓN
+========================================================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+
+    width: 100%;
+    padding: 1rem 5%;
+
+    background-color: var(--color-principal);
 }
 
-.listado-grid__item a {
-  align-self: end;
-  font-weight: bold;
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-@media (max-width: 480px) {
-  .listado-grid {
-    grid-template-columns: 1fr;
-  }
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    list-style: none;
 }
 
-/* ------------------------------------------------------------
-   2) Panel de administración (boceto)
-   Estructura de página con Grid: cabecera, menú lateral y
-   contenido principal con tarjetas de resumen.
-   ------------------------------------------------------------ */
-.admin-layout {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  grid-template-rows: 64px 1fr;
-  grid-template-areas:
-    "sidebar header"
-    "sidebar main";
-  min-height: 100vh;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-.admin-header {
-  grid-area: header;
-  display: flex;
-  align-items: center;
-  padding: 0 1.5rem;
-  border-bottom: 1px solid #c9b37c;
+.nav-links a:hover,
+.nav-links a:focus {
+    color: var(--color-secundario);
 }
 
-.admin-sidebar {
-  grid-area: sidebar;
-  background: #2c2a24;
-  color: #f1e9d2;
-  padding: 1.5rem 1rem;
+
+/* =========================================================
+   CABECERA
+========================================================= */
+
+header {
+    text-align: center;
 }
 
-.admin-sidebar nav {
-  display: grid;
-  gap: 0.25rem;
+header h1 {
+    margin-top: 2rem;
+    color: var(--color-principal);
+    font-size: 2.5rem;
+    text-transform: uppercase;
 }
 
-.admin-sidebar a {
-  color: #d8cba9;
-  text-decoration: none;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
+header h2 {
+    margin-top: 0.5rem;
+    color: var(--color-secundario);
 }
 
-.admin-sidebar a:hover,
-.admin-sidebar a:focus-visible {
-  background: #46422f;
-  color: #fff;
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
+
+main {
+    width: min(600px, 90%);
+    margin: 2rem auto;
 }
 
-.admin-main {
-  grid-area: main;
-  padding: 1.5rem;
-  display: grid;
-  gap: 1.5rem;
-  grid-template-rows: auto 1fr;
+
+/* =========================================================
+   FORMULARIO
+========================================================= */
+
+#seccion-reserva,
+#mensaje-confirmacion {
+    background-color: var(--color-tarjeta);
+
+    padding: 2rem;
+
+    border-radius: var(--radio);
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+    border-top: 5px solid var(--color-secundario);
 }
 
-.admin-summary {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
+#seccion-reserva h2 {
+    color: var(--color-principal);
+    margin-bottom: 0.5rem;
 }
 
-.summary-card {
-  border: 1px solid #c9b37c;
-  border-radius: 6px;
-  padding: 1rem;
-  display: grid;
-  gap: 0.25rem;
-  background: #fdfaf3;
+.descripcion-formulario {
+    margin-bottom: 1.5rem;
+    color: #666;
 }
 
-.summary-card strong {
-  font-size: 1.4rem;
+
+/* =========================================================
+   CAMPOS
+========================================================= */
+
+.input-group {
+    margin-bottom: 1.25rem;
 }
 
-.summary-card span {
-  font-size: 0.85rem;
-  color: #777;
+.input-group label {
+    display: block;
+
+    margin-bottom: 0.5rem;
+
+    font-weight: 600;
+
+    color: var(--color-principal);
 }
 
-.admin-table {
-  border: 1px solid #c9b37c;
-  border-radius: 6px;
-  overflow: hidden;
-  display: grid;
+.input-group input,
+.input-group select {
+    width: 100%;
+
+    padding: 0.8rem;
+
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+
+    background-color: white;
+
+    font-size: 1rem;
 }
 
-.table-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 100px;
-  padding: 0.75rem 1rem;
-  align-items: center;
+
+/* =========================================================
+   ESTADO FOCUS
+========================================================= */
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+
+    border-color: var(--color-secundario);
+
+    box-shadow: 0 0 0 3px rgba(184, 145, 80, 0.2);
 }
 
-.table-row.header {
-  background: #f1e9d2;
-  font-weight: 600;
-  font-size: 0.85rem;
+
+/* =========================================================
+   ERRORES
+========================================================= */
+
+.input-group input.error,
+.input-group select.error {
+    border-color: var(--color-error);
 }
 
-.table-row + .table-row {
-  border-top: 1px solid #e6dcc0;
+.mensaje-error {
+    display: block;
+
+    margin-top: 0.4rem;
+
+    color: var(--color-error);
+
+    font-size: 0.85rem;
 }
 
-@media (max-width: 700px) {
-  .admin-layout {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr;
-    grid-template-areas:
-      "header"
-      "sidebar"
-      "main";
-  }
 
-  .admin-sidebar nav {
-    grid-auto-flow: column;
-    overflow-x: auto;
-  }
+/* =========================================================
+   BOTÓN
+========================================================= */
 
-  .table-row {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 0.25rem;
-  }
+#btn-enviar,
+#btn-nueva-reserva {
+    width: 100%;
+
+    padding: 0.9rem;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: var(--color-principal);
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
 }
-=======
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
-body { background-color: var(--color-fondo); color: var(--color-texto); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
-header { text-align: center; margin-bottom: 30px; }
-header h1 { color: var(--color-principal); font-size: 2.5rem; text-transform: uppercase; }
-header h2 { color: var(--color-secundario); font-size: 1.2rem; }
-main { width: 100%; max-width: 500px; }
-#seccion-reserva, #mensaje-confirmacion { background-color: var(--color-tarjeta); padding: 30px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); border-top: 5px solid var(--color-secundario); }
-.input-group { margin-bottom: 20px; }
-.input-group label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--color-principal); }
-.input-group input { width: 100%; padding: 12px; border: 1.5px solid #ccc; border-radius: 6px; }
-#btn-enviar { width: 100%; padding: 14px; background-color: var(--color-principal); color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; }
-#mensaje-confirmacion { text-align: center; border-top-color: #27ae60; }
-#mensaje-confirmacion p { color: #27ae60; font-weight: 600; }
->>>>>>> grupo-2-javier
+
+#btn-enviar:hover,
+#btn-nueva-reserva:hover {
+    background-color: var(--color-secundario);
+}
+
+
+/* =========================================================
+   CONFIRMACIÓN
+========================================================= */
+
+#mensaje-confirmacion {
+    text-align: center;
+
+    border-top-color: var(--color-exito);
+}
+
+#mensaje-confirmacion h2 {
+    color: var(--color-exito);
+
+    margin-bottom: 1rem;
+}
+
+#mensaje-confirmacion p {
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    text-align: center;
+
+    padding: 1.5rem;
+
+    color: #666;
+}
+
+
+/* =========================================================
+   RESPONSIVE - MÓVIL
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    #seccion-reserva,
+    #mensaje-confirmacion {
+        padding: 1.25rem;
+    }
+
+}
