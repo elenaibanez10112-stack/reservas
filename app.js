@@ -5,6 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     formReserva.addEventListener('submit', (evento) => {
         evento.preventDefault();
+
+        const nombre = document.getElementById('nombre').value;
+        const correo = document.getElementById('correo').value;
+        const asistentes = document.getElementById('asistentes').value;
+
+        console.log('Reserva Recibida:', { nombre, correo, asistentes });
+
         seccionReserva.style.display = 'none';
         mensajeConfirmacion.style.display = 'block';
     });
