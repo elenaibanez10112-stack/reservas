@@ -3,50 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espacios del Castillo - Listado</title>
+    <title>Módulo Castillo: Gestión de Espacios</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
     <header>
         <h1>Módulo Castillo: Gestión de Espacios</h1>
-        <nav>
-            <a href="index.html">Inicio</a>
-        </nav>
+        <nav><a href="index.html">Inicio</a></nav>
     </header>
-
-    <main>
-        <h2>Seleccione un Espacio para Reservar</h2>
-        
-        <!-- Lista semántica estructurada para las tarjetas requeridas -->
+    <main class="contenedor">
+        <h2>Espacios Disponibles para Reservar</h2>
         <ul class="tarjetas-container">
             <li>
                 <article class="tarjeta">
                     <h3>Salón del Trono</h3>
-                    <p>Capacidad para grandes ceremonias y visitas guiadas privadas.</p>
-                    <a href="detalle.html">Ver detalle del espacio</a>
+                    <p>Capacidad: 150 personas</p>
+                    <p>Ideal para banquetes reales y ceremonias oficiales de gala.</p>
+                    <button class="btn-seleccionar">Seleccionar Espacio</button>
                 </article>
             </li>
             <li>
                 <article class="tarjeta">
                     <h3>Patio de Armas</h3>
-                    <p>Espacio abierto ideal para eventos medievales y recepciones al aire libre.</p>
-                    <a href="detalle.html">Ver detalle del espacio</a>
+                    <p>Capacidad: 500 personas</p>
+                    <p>Espacio al aire libre perfecto para conciertos, ferias y mercados medievales.</p>
+                    <button class="btn-seleccionar">Seleccionar Espacio</button>
                 </article>
             </li>
             <li>
                 <article class="tarjeta">
-                    <h3>Jardines Reales</h3>
-                    <p>Extensa zona verde con fuentes históricas para paseos exclusivos.</p>
-                    <a href="detalle.html">Ver detalle del espacio</a>
+                    <h3>Torre del Homenaje</h3>
+                    <p>Capacidad: 50 personas</p>
+                    <p>Vistas panorámicas increíbles, ideal para grupos reducidos y fotografías.</p>
+                    <button class="btn-seleccionar">Seleccionar Espacio</button>
                 </article>
             </li>
         </ul>
     </main>
-
     <footer>
-        <p>&copy; 2026 Reservas Castillo - Equipo 2</p>
+        <p>&copy; 2026 Módulo Castillo - Trabajo en Equipo</p>
     </footer>
-
+    <script src="listado.js"></script>
 </body>
 </html>
