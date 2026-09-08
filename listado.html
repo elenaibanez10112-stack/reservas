@@ -8,46 +8,57 @@
     <link rel="stylesheet" href="css/grid.css">
 </head>
 <body>
+    <!-- Cabecera idéntica a la portada -->
     <header>
-        <h1>Módulo Castillo: Gestión de Espacios</h1>
-        <nav><a href="index.html">Inicio</a></nav>
+        <div class="header-container">
+            <h1 class="logo-title">Castillo de la Guardia</h1>
+            <nav class="nav-menu">
+                <a href="index.html">Inicio</a>
+                <a href="listado.html" class="active">Reservas</a>
+                <a href="detalle.html">Detalle</a>
+            </nav>
+        </div>
     </header>
-    <main class="contenedor">
-        <h2>Espacios Disponibles para Reservar</h2>
-        <ul class="tarjetas-container">
-            <li>
-                <article class="tarjeta">
-                    <h3>Salón del Trono</h3>
-                    <p>Capacidad: 150 personas</p>
-                    <p>Ideal para banquetes reales y ceremonias oficiales de gala.</p>
-                    <button class="btn-seleccionar">Seleccionar Espacio</button>
-                </article>
-            </li>
-            <li class="listado-grid__item">
-                <article>
-            <li>
-                <article class="tarjeta">
-                    <h3>Patio de Armas</h3>
-                    <p>Capacidad: 500 personas</p>
-                    <p>Espacio al aire libre perfecto para conciertos, ferias y mercados medievales.</p>
-                    <button class="btn-seleccionar">Seleccionar Espacio</button>
-                </article>
-            </li>
-            <li class="listado-grid__item">
-                <article>
-            <li>
-                <article class="tarjeta">
-                    <h3>Torre del Homenaje</h3>
-                    <p>Capacidad: 50 personas</p>
-                    <p>Vistas panorámicas increíbles, ideal para grupos reducidos y fotografías.</p>
-                    <button class="btn-seleccionar">Seleccionar Espacio</button>
-                </article>
-            </li>
-        </ul>
+
+    <!-- Contenedor principal con el estilo de tarjeta blanca centrada -->
+    <main class="main-content">
+        <section class="form-container">
+            <h2 class="form-title">CASTILLO DE LA GUARDIA</h2>
+            <p class="form-subtitle">Espacios Disponibles para Reservar</p>
+            
+            <ul class="tarjetas-container" style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 2rem;">
+                    <article class="tarjeta" style="background: #fdfdfd; padding: 1.5rem; border-radius: 8px; border-left: 5px solid #bfa15f; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                        <h3 style="color: #1a252f; margin-top: 0;">Salón del Trono</h3>
+                        <p><strong>Capacidad:</strong> 150 personas</p>
+                        <p><strong>Tipo:</strong> Interior</p>
+                        <button class="btn-detalle" data-id="1" style="background-color: #1a252f; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%;">Ver detalle</button>
+                    </article>
+                </li>
+                <li style="margin-bottom: 2rem;">
+                    <article class="tarjeta" style="background: #fdfdfd; padding: 1.5rem; border-radius: 8px; border-left: 5px solid #bfa15f; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                        <h3 style="color: #1a252f; margin-top: 0;">Patio de Armas</h3>
+                        <p><strong>Capacidad:</strong> 500 personas</p>
+                        <p><strong>Tipo:</strong> Exterior</p>
+                        <button class="btn-detalle" data-id="2" style="background-color: #1a252f; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%;">Ver detalle</button>
+                    </article>
+                </li>
+                <li style="margin-bottom: 2rem;">
+                    <article class="tarjeta" style="background: #fdfdfd; padding: 1.5rem; border-radius: 8px; border-left: 5px solid #bfa15f; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                        <h3 style="color: #1a252f; margin-top: 0;">Torre del Homenaje</h3>
+                        <p><strong>Capacidad:</strong> 50 personas</p>
+                        <p><strong>Tipo:</strong> Vistas</p>
+                        <button class="btn-detalle" data-id="3" style="background-color: #1a252f; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%;">Ver detalle</button>
+                    </article>
+                </li>
+            </ul>
+        </section>
     </main>
-    <footer>
+
+    <footer style="text-align: center; padding: 2rem; color: #7f8c8d; font-size: 0.9rem;">
         <p>&copy; 2026 Módulo Castillo - Trabajo en Equipo</p>
     </footer>
+
     <script src="practica_sprint.js"></script>
 </body>
 </html>
