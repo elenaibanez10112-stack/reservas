@@ -6,57 +6,58 @@
     <title>Detalle del Espacio - Castillo</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <!-- Cabecera idéntica a la portada -->
-    <header>
-        <div class="header-container">
-            <h1 class="logo-title">Castillo de la Guardia</h1>
-            <nav class="nav-menu">
-                <a href="index.html">Inicio</a>
-                <a href="listado.html">Reservas</a>
-                <a href="detalle.html" class="active">Detalle</a>
-            </nav>
-        </div>
+<body style="background-color: #f4f6f7; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #2c3e50;">
+
+    <!-- Cabecera Premium Coherente -->
+    <header style="background-color: #1a252f; color: white; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <h1 style="margin: 0; font-size: 1.6rem; font-weight: 700; letter-spacing: 1px; color: #ffffff;">CASTILLO DE LA GUARDIA</h1>
+        <nav>
+            <a href="index.html" style="color: #ffffff; text-decoration: none; margin-right: 1.8rem; font-weight: 600; font-size: 1rem;">Inicio</a>
+            <a href="listado.html" style="color: #ffffff; text-decoration: none; margin-right: 1.8rem; font-weight: 600; font-size: 1rem;">Reservas</a>
+            <a href="detalle.html" style="color: #bfa15f; text-decoration: none; font-weight: 600; font-size: 1rem; border-bottom: 2px solid #bfa15f; padding-bottom: 4px;">Detail</a>
+        </nav>
     </header>
 
-    <!-- Contenedor principal estructurado como la portada -->
-    <main class="main-content">
-        <section class="form-container">
-            <h2 class="form-title">CASTILLO DE LA GUARDIA</h2>
-            <p class="form-subtitle">Detalle del Recurso Seleccionado</p>
-            
-            <h3 style="color: #1a252f; margin-bottom: 1rem; border-bottom: 2px solid #bfa15f; padding-bottom: 0.5rem;">Información Técnica del Espacio</h3>
-            
-            <!-- Tabla de datos estilizada para que no se vea rota -->
-            <table style="width: 100%; border-collapse: collapse; margin-bottom: 2rem; background: #ffffff;">
+    <!-- Contenedor Principal Centrado con Estilo Minimalista -->
+    <main style="max-width: 750px; margin: 3rem auto; background: #ffffff; padding: 3rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 6px solid #bfa15f;">
+        
+        <div style="text-align: center; margin-bottom: 2.5rem;">
+            <h2 style="color: #1a252f; margin: 0 0 0.5rem 0; font-size: 2.2rem; font-weight: 800; letter-spacing: 1.5px;">FICHA TÉCNICA</h2>
+            <p style="color: #bfa15f; font-weight: 700; margin: 0; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 2px;">Especificaciones detalladas del recurso</p>
+        </div>
+        
+        <!-- Tabla con sombras suaves y filas estilizadas -->
+        <div style="overflow: hidden; border-radius: 8px;">
+            <table style="width: 100%; border-collapse: collapse; background: #ffffff; font-size: 1rem;">
                 <thead>
                     <tr style="background-color: #1a252f; color: white;">
-                        <th style="padding: 0.8rem; border: 1px solid #ddd; text-align: left;">Característica Obligatoria</th>
-                        <th style="padding: 0.8rem; border: 1px solid #ddd; text-align: left;">Detalle Especificado</th>
+                        <th style="padding: 1.2rem; text-align: left; font-weight: 600; letter-spacing: 0.5px; width: 35%;">Característica Requerida</th>
+                        <th style="padding: 1.2rem; text-align: left; font-weight: 600; letter-spacing: 0.5px;">Detalle Especificado</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td style="padding: 0.8rem; border: 1px solid #ddd; font-weight: bold; background: #f9f9f9;">Descripción</td>
-                        <td style="padding: 0.8rem; border: 1px solid #ddd;">Estancia principal del castillo decorada con tapices históricos y arquitectura gótica original.</td>
+                    <tr style="border-bottom: 1px solid #e2e8f0;">
+                        <td style="padding: 1.2rem; font-weight: 700; color: #1a252f; background: #fdfdfd; border-right: 1px solid #e2e8f0;">🏛️ Descripción</td>
+                        <td style="padding: 1.2rem; color: #4a5568; line-height: 1.6;">Estancia señorial de la alta nobleza decorada con tapices históricos tejidos a mano, escudos heráldicos familiares y arquitectura gótica original en techos altos.</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e2e8f0;">
+                        <td style="padding: 1.2rem; font-weight: 700; color: #1a252f; background: #fdfdfd; border-right: 1px solid #e2e8f0;">👥 Aforo Autorizado</td>
+                        <td style="padding: 1.2rem; color: #4a5568; line-height: 1.6;">Máximo 150 personas de forma simultánea cumpliendo normativas estrictas de seguridad.</td>
                     </tr>
                     <tr>
-                        <td style="padding: 0.8rem; border: 1px solid #ddd; font-weight: bold; background: #f9f9f9;">Aforo / Capacidad</td>
-                        <td style="padding: 0.8rem; border: 1px solid #ddd;">Máximo 150 personas de forma simultánea.</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 0.8rem; border: 1px solid #ddd; font-weight: bold; background: #f9f9f9;">Características</td>
-                        <td style="padding: 0.8rem; border: 1px solid #ddd;">Accesibilidad para movilidad reducida, iluminación artística integrada y climatización pasiva medieval.</td>
+                        <td style="padding: 1.2rem; font-weight: 700; color: #1a252f; background: #fdfdfd; border-right: 1px solid #e2e8f0;">✨ Infraestructura</td>
+                        <td style="padding: 1.2rem; color: #4a5568; line-height: 1.6;">Accesibilidad garantizada para movilidad reducida, sistemas integrados de iluminación artística focalizada y sistema de climatización pasiva ecológica medieval.</td>
                     </tr>
                 </tbody>
             </table>
+        </div>
 
-            <a href="listado.html" style="display: inline-block; text-align: center; width: 93%; background-color: #bfa15f; color: white; text-decoration: none; padding: 0.8rem; border-radius: 4px; font-weight: bold; transition: background 0.2s;">&larr; Volver al listado de espacios</a>
-        </section>
+        <!-- Botón de regreso estilizado -->
+        <a href="listado.html" style="display: block; text-align: center; background-color: #bfa15f; color: white; text-decoration: none; padding: 1rem; border-radius: 6px; font-weight: 700; font-size: 1rem; transition: background-color 0.2s; box-shadow: 0 4px 10px rgba(191,161,95,0.2); letter-spacing: 0.5px;">&larr; Volver al catálogo de espacios</a>
     </main>
 
-    <footer style="text-align: center; padding: 2rem; color: #7f8c8d; font-size: 0.9rem;">
-        <p>&copy; 2026 Reservas Castillo - Equipo 2</p>
+    <footer style="text-align: center; padding: 2rem; color: #95a5a6; font-size: 0.85rem; background-color: #ffffff; border-top: 1px solid #e2e8f0; margin-top: 4rem;">
+        <p>&copy; 2026 Reservas Castillo - Equipo de Desarrollo 2</p>
     </footer>
 </body>
 </html>
