@@ -7,49 +7,56 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
+    <!-- Cabecera idéntica a la portada -->
     <header>
-        <h1>Detalle del Recurso Seleccionado</h1>
+        <div class="header-container">
+            <h1 class="logo-title">Castillo de la Guardia</h1>
+            <nav class="nav-menu">
+                <a href="index.html">Inicio</a>
+                <a href="listado.html">Reservas</a>
+                <a href="detalle.html" class="active">Detalle</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Información Técnica del Espacio</h2>
+    <!-- Contenedor principal estructurado como la portada -->
+    <main class="main-content">
+        <section class="form-container">
+            <h2 class="form-title">CASTILLO DE LA GUARDIA</h2>
+            <p class="form-subtitle">Detalle del Recurso Seleccionado</p>
             
-            <!-- Estructura de tabla semántica requerida por las pautas -->
-            <table border="1">
+            <h3 style="color: #1a252f; margin-bottom: 1rem; border-bottom: 2px solid #bfa15f; padding-bottom: 0.5rem;">Información Técnica del Espacio</h3>
+            
+            <!-- Tabla de datos estilizada para que no se vea rota -->
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 2rem; background: #ffffff;">
                 <thead>
-                    <tr>
-                        <th>Característica Obligatoria</th>
-                        <th>Detalle Especificado</th>
+                    <tr style="background-color: #1a252f; color: white;">
+                        <th style="padding: 0.8rem; border: 1px solid #ddd; text-align: left;">Característica Obligatoria</th>
+                        <th style="padding: 0.8rem; border: 1px solid #ddd; text-align: left;">Detalle Especificado</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Descripción</strong></td>
-                        <td>Estancia principal del castillo decorada con tapices históricos y arquitectura gótica original.</td>
+                        <td style="padding: 0.8rem; border: 1px solid #ddd; font-weight: bold; background: #f9f9f9;">Descripción</td>
+                        <td style="padding: 0.8rem; border: 1px solid #ddd;">Estancia principal del castillo decorada con tapices históricos y arquitectura gótica original.</td>
                     </tr>
                     <tr>
-                        <td><strong>Aforo / Capacidad</strong></td>
-                        <td>Máximo 150 personas de forma simultánea.</td>
+                        <td style="padding: 0.8rem; border: 1px solid #ddd; font-weight: bold; background: #f9f9f9;">Aforo / Capacidad</td>
+                        <td style="padding: 0.8rem; border: 1px solid #ddd;">Máximo 150 personas de forma simultánea.</td>
                     </tr>
                     <tr>
-                        <td><strong>Características del espacio</strong></td>
-                        <td>Accesibilidad para movilidad reducida, iluminación artística integrada y climatización pasiva medieval.</td>
+                        <td style="padding: 0.8rem; border: 1px solid #ddd; font-weight: bold; background: #f9f9f9;">Características</td>
+                        <td style="padding: 0.8rem; border: 1px solid #ddd;">Accesibilidad para movilidad reducida, iluminación artística integrada y climatización pasiva medieval.</td>
                     </tr>
                 </tbody>
             </table>
-        </section>
 
-        <section style="margin-top: 20px;">
-            <!-- Enlace obligatorio para volver atrás -->
-            <p><a href="listado.html">&larr; Volver al listado de espacios</a></p>
+            <a href="listado.html" style="display: inline-block; text-align: center; width: 93%; background-color: #bfa15f; color: white; text-decoration: none; padding: 0.8rem; border-radius: 4px; font-weight: bold; transition: background 0.2s;">&larr; Volver al listado de espacios</a>
         </section>
     </main>
 
-    <footer>
+    <footer style="text-align: center; padding: 2rem; color: #7f8c8d; font-size: 0.9rem;">
         <p>&copy; 2026 Reservas Castillo - Equipo 2</p>
     </footer>
-
 </body>
 </html>
