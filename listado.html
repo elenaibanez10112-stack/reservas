@@ -6,58 +6,56 @@
     <title>Módulo Castillo: Gestión de Espacios</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <!-- Cabecera idéntica a la portada -->
-    <header>
-        <div class="header-container">
-            <h1 class="logo-title">Castillo de la Guardia</h1>
-            <nav class="nav-menu">
-                <a href="index.html">Inicio</a>
-                <a href="listado.html" class="active">Reservas</a>
-                <a href="detalle.html">Detalle</a>
-            </nav>
-        </div>
+<body style="background-color: #f4f6f7; margin: 0; font-family: sans-serif;">
+
+    <!-- Cabecera igual que la portada -->
+    <header style="background-color: #1a252f; color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+        <h1 style="margin: 0; font-size: 1.5rem; color: #ffffff;">Castillo de la Guardia</h1>
+        <nav>
+            <a href="index.html" style="color: white; text-decoration: none; margin-right: 1.5rem; font-weight: bold;">Inicio</a>
+            <a href="listado.html" style="color: #bfa15f; text-decoration: none; margin-right: 1.5rem; font-weight: bold;">Reservas</a>
+            <a href="detalle.html" style="color: white; text-decoration: none; font-weight: bold;">Detalle</a>
+        </nav>
     </header>
 
-    <!-- Contenedor principal con el estilo de tarjeta blanca centrada -->
-    <main class="main-content">
-        <section class="form-container">
-            <h2 class="form-title">CASTILLO DE LA GUARDIA</h2>
-            <p class="form-subtitle">Espacios Disponibles para Reservar</p>
-            
-            <ul class="tarjetas-container" style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 2rem;">
-                    <article class="tarjeta" style="background: #fdfdfd; padding: 1.5rem; border-radius: 8px; border-left: 5px solid #bfa15f; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                        <h3 style="color: #1a252f; margin-top: 0;">Salón del Trono</h3>
-                        <p><strong>Capacidad:</strong> 150 personas</p>
-                        <p><strong>Tipo:</strong> Interior</p>
-                        <button class="btn-detalle" data-id="1" style="background-color: #1a252f; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%;">Ver detalle</button>
-                    </article>
-                </li>
-                <li style="margin-bottom: 2rem;">
-                    <article class="tarjeta" style="background: #fdfdfd; padding: 1.5rem; border-radius: 8px; border-left: 5px solid #bfa15f; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                        <h3 style="color: #1a252f; margin-top: 0;">Patio de Armas</h3>
-                        <p><strong>Capacidad:</strong> 500 personas</p>
-                        <p><strong>Tipo:</strong> Exterior</p>
-                        <button class="btn-detalle" data-id="2" style="background-color: #1a252f; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%;">Ver detalle</button>
-                    </article>
-                </li>
-                <li style="margin-bottom: 2rem;">
-                    <article class="tarjeta" style="background: #fdfdfd; padding: 1.5rem; border-radius: 8px; border-left: 5px solid #bfa15f; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                        <h3 style="color: #1a252f; margin-top: 0;">Torre del Homenaje</h3>
-                        <p><strong>Capacidad:</strong> 50 personas</p>
-                        <p><strong>Tipo:</strong> Vistas</p>
-                        <button class="btn-detalle" data-id="3" style="background-color: #1a252f; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%;">Ver detalle</button>
-                    </article>
-                </li>
-            </ul>
-        </section>
+    <!-- Caja blanca centrada igual que la portada -->
+    <main style="max-width: 600px; margin: 3rem auto; background: #ffffff; padding: 2.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid #bfa15f;">
+        
+        <h2 style="text-align: center; color: #1a252f; margin-top: 0; font-size: 1.8rem; letter-spacing: 1px;">CASTILLO DE LA GUARDIA</h2>
+        <p style="text-align: center; color: #bfa15f; font-weight: bold; margin-bottom: 2rem; text-transform: uppercase; font-size: 0.9rem;">Espacios Disponibles para Reservar</p>
+        
+        <ul class="tarjetas-container" style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 1.5rem;">
+                <article class="tarjeta" style="background: #fdfdfd; padding: 1.5rem; border-radius: 6px; border: 1px solid #e2e8f0; border-left: 5px solid #1a252f;">
+                    <h3 style="color: #1a252f; margin-top: 0; font-size: 1.3rem;">Salón del Trono</h3>
+                    <p style="margin: 0.5rem 0; color: #555;"><strong>Capacidad:</strong> 150 personas</p>
+                    <p style="margin: 0.5rem 0; color: #555;"><strong>Tipo:</strong> Interior</p>
+                    <button class="btn-seleccionar" style="background-color: #1a252f; color: white; border: none; padding: 0.7rem; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%; margin-top: 0.5rem; transition: 0.2s;">Seleccionar Espacio</button>
+                </article>
+            </li>
+            <li style="margin-bottom: 1.5rem;">
+                <article class="tarjeta" style="background: #fdfdfd; padding: 1.5rem; border-radius: 6px; border: 1px solid #e2e8f0; border-left: 5px solid #1a252f;">
+                    <h3 style="color: #1a252f; margin-top: 0; font-size: 1.3rem;">Patio de Armas</h3>
+                    <p style="margin: 0.5rem 0; color: #555;"><strong>Capacidad:</strong> 500 personas</p>
+                    <p style="margin: 0.5rem 0; color: #555;"><strong>Tipo:</strong> Exterior</p>
+                    <button class="btn-seleccionar" style="background-color: #1a252f; color: white; border: none; padding: 0.7rem; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%; margin-top: 0.5rem; transition: 0.2s;">Seleccionar Espacio</button>
+                </article>
+            </li>
+            <li style="margin-bottom: 1.5rem;">
+                <article class="tarjeta" style="background: #fdfdfd; padding: 1.5rem; border-radius: 6px; border: 1px solid #e2e8f0; border-left: 5px solid #1a252f;">
+                    <h3 style="color: #1a252f; margin-top: 0; font-size: 1.3rem;">Torre del Homenaje</h3>
+                    <p style="margin: 0.5rem 0; color: #555;"><strong>Capacidad:</strong> 50 personas</p>
+                    <p style="margin: 0.5rem 0; color: #555;"><strong>Tipo:</strong> Vistas</p>
+                    <button class="btn-seleccionar" style="background-color: #1a252f; color: white; border: none; padding: 0.7rem; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%; margin-top: 0.5rem; transition: 0.2s;">Seleccionar Espacio</button>
+                </article>
+            </li>
+        </ul>
     </main>
 
-    <footer style="text-align: center; padding: 2rem; color: #7f8c8d; font-size: 0.9rem;">
+    <footer style="text-align: center; padding: 1rem; color: #7f8c8d; font-size: 0.85rem;">
         <p>&copy; 2026 Módulo Castillo - Trabajo en Equipo</p>
     </footer>
 
-    <script src="practica_sprint.js"></script>
+    <script src="listado.js"></script>
 </body>
 </html>
