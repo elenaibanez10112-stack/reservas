@@ -1,13 +1,23 @@
+/* =========================================================
+   VARIABLES
+========================================================= */
+
 :root {
-    --color-deportivo: #e74c3c; 
-    --color-castillo: #f39c12;   
-    --color-salas: #2ecc71;      
     --color-principal: #2c3e50;
-    --color-fondo: #f8f9fa;
+    --color-secundario: #b89150;
+    --color-fondo: #f4f6f8;
+    --color-tarjeta: #ffffff;
     --color-texto: #333333;
-    --color-blanco: #ffffff;
-    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --color-error: #c0392b;
+    --color-exito: #27ae60;
+
+    --radio: 10px;
 }
+
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+========================================================= */
 
 * {
     box-sizing: border-box;
@@ -16,51 +26,271 @@
 }
 
 body {
-    font-family: var(--fuente-principal);
+    font-family: Arial, sans-serif;
     background-color: var(--color-fondo);
     color: var(--color-texto);
-    line-height: 1.6;
+    min-height: 100vh;
 }
+
+
+/* =========================================================
+   NAVEGACIÓN
+========================================================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+
+    width: 100%;
+    padding: 1rem 5%;
+
+    background-color: var(--color-principal);
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: var(--color-secundario);
+}
+
+
+/* =========================================================
+   CABECERA
+========================================================= */
 
 header {
-    background-color: var(--color-principal);
-    color: var(--color-blanco);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
+    text-align: center;
 }
 
-header nav {
-    display: flex;
-    gap: 1.5rem; 
+header h1 {
+    margin-top: 2rem;
+    color: var(--color-principal);
+    font-size: 2.5rem;
+    text-transform: uppercase;
 }
 
-header nav a {
-    color: var(--color-blanco);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background 0.3s;
+header h2 {
+    margin-top: 0.5rem;
+    color: var(--color-secundario);
 }
 
-header nav a:hover {
-    background-color: var(--color-castillo); 
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
+
+main {
+    width: min(600px, 90%);
+    margin: 2rem auto;
 }
 
-main ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+
+/* =========================================================
+   FORMULARIO
+========================================================= */
+
+#seccion-reserva,
+#mensaje-confirmacion {
+    background-color: var(--color-tarjeta);
+
     padding: 2rem;
+
+    border-radius: var(--radio);
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+    border-top: 5px solid var(--color-secundario);
 }
 
-article {
-    background-color: var(--color-blanco);
-    border-top: 5px solid var(--color-castillo); 
+#seccion-reserva h2 {
+    color: var(--color-principal);
+    margin-bottom: 0.5rem;
+}
+
+.descripcion-formulario {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+
+/* =========================================================
+   CAMPOS
+========================================================= */
+
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 0.5rem;
+
+    font-weight: 600;
+
+    color: var(--color-principal);
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+
+    padding: 0.8rem;
+
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+
+    background-color: white;
+
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   ESTADO FOCUS
+========================================================= */
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+
+    border-color: var(--color-secundario);
+
+    box-shadow: 0 0 0 3px rgba(184, 145, 80, 0.2);
+}
+
+
+/* =========================================================
+   ERRORES
+========================================================= */
+
+.input-group input.error,
+.input-group select.error {
+    border-color: var(--color-error);
+}
+
+.mensaje-error {
+    display: block;
+
+    margin-top: 0.4rem;
+
+    color: var(--color-error);
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   BOTÓN
+========================================================= */
+
+#btn-enviar,
+#btn-nueva-reserva {
+    width: 100%;
+
+    padding: 0.9rem;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: var(--color-principal);
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+#btn-enviar:hover,
+#btn-nueva-reserva:hover {
+    background-color: var(--color-secundario);
+}
+
+
+/* =========================================================
+   CONFIRMACIÓN
+========================================================= */
+
+#mensaje-confirmacion {
+    text-align: center;
+
+    border-top-color: var(--color-exito);
+}
+
+#mensaje-confirmacion h2 {
+    color: var(--color-exito);
+
+    margin-bottom: 1rem;
+}
+
+#mensaje-confirmacion p {
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    text-align: center;
+
     padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+    color: #666;
+}
+
+
+/* =========================================================
+   RESPONSIVE - MÓVIL
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    #seccion-reserva,
+    #mensaje-confirmacion {
+        padding: 1.25rem;
+    }
+
 }
