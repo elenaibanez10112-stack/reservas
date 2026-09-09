@@ -4,75 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Módulo Castillo: Gestión de Espacios</title>
+    <!-- Conexiones a las hojas de estilo ordenadas -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/listado.css">
 </head>
-<body style="background-color: #f4f6f7; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #2c3e50;">
+<body class="body-listado">
 
-    <!-- Cabecera Premium -->
-    <header style="background-color: #1a252f; color: white; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-        <h1 style="margin: 0; font-size: 1.6rem; font-weight: 700; letter-spacing: 1px; color: #ffffff;">CASTILLO DE LA GUARDIA</h1>
+    <header class="header-premium">
+        <h1>CASTILLO DE LA GUARDIA</h1>
         <nav>
-            <a href="index.html" style="color: #ffffff; text-decoration: none; margin-right: 1.8rem; font-weight: 600; font-size: 1rem; transition: color 0.2s;">Inicio</a>
-            <a href="listado.html" style="color: #bfa15f; text-decoration: none; margin-right: 1.8rem; font-weight: 600; font-size: 1rem; border-bottom: 2px solid #bfa15f; padding-bottom: 4px;">Reservas</a>
-            <a href="detalle.html" style="color: #ffffff; text-decoration: none; font-weight: 600; font-size: 1rem; transition: color 0.2s;">Detalle</a>
+            <a href="index.html" class="nav-enlace">Inicio</a>
+            <a href="listado.html" class="nav-enlace activo">Reservas</a>
+            <a href="detalle.html" class="nav-enlace">Detalle</a>
         </nav>
     </header>
 
-    <!-- Contenedor Principal Centrado con Fondo Elegante -->
-    <main style="max-width: 700px; margin: 3rem auto; background: #ffffff; padding: 3rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 6px solid #bfa15f;">
-        
-        <div style="text-align: center; margin-bottom: 2.5rem;">
-            <h2 style="color: #1a252f; margin: 0 0 0.5rem 0; font-size: 2.2rem; font-weight: 800; letter-spacing: 1.5px;">CATÁLOGO DE ESPACIOS</h2>
-            <p style="color: #bfa15f; font-weight: 700; margin: 0; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 2px;">Selecciona el escenario para tu experiencia</p>
+    <main class="main-listado">
+        <div class="titulo-seccion">
+            <h2>CATÁLOGO DE ESPACIOS</h2>
+            <p>Selecciona el escenario para tu experiencia</p>
         </div>
         
-        <ul class="tarjetas-container" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 2rem;">
-            
-            <!-- Tarjeta 1: Salón del Trono -->
+        <ul class="lista-tarjetas">
             <li>
-                <article class="tarjeta" style="background: #ffffff; border-radius: 10px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: transform 0.2s, box-shadow 0.2s;">
-                    <img src="https://unsplash.com" alt="Salón del Trono" style="width: 100%; height: 200px; object-fit: cover;">
-                    <div style="padding: 1.8rem;">
-                        <h3 style="color: #1a252f; margin: 0 0 0.8rem 0; font-size: 1.5rem; font-weight: 700;">Salón del Trono</h3>
-                        <p style="color: #7f8c8d; font-size: 0.95rem; margin: 0 0 1.2rem 0; line-height: 1.5;">Estancia principal decorada con tapices históricos y arquitectura gótica original. Ideal para ceremonias de gran gala.</p>
-                        <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem; font-size: 0.9rem; color: #34495e; background: #f8fafc; padding: 0.8rem; border-radius: 6px;">
+                <article class="tarjeta-espacio">
+                    <img src="https://unsplash.com" alt="Salón del Trono">
+                    <div class="tarjeta-cuerpo">
+                        <h3>Salón del Trono</h3>
+                        <p>Estancia principal decorada con tapices históricos y arquitectura gótica original. Ideal para ceremonias de gran gala.</p>
+                        <div class="tarjeta-info">
                             <span><strong>👥 Capacidad:</strong> 150 personas</span>
                             <span><strong>🏰 Tipo:</strong> Interior Histórico</span>
                         </div>
-                        <button class="btn-seleccionar" style="background-color: #1a252f; color: white; border: none; padding: 0.9rem; border-radius: 6px; cursor: pointer; font-weight: 700; font-size: 1rem; width: 100%; transition: background-color 0.2s; letter-spacing: 0.5px;">Seleccionar Espacio</button>
+                        <button class="btn-seleccionar">Seleccionar Espacio</button>
                     </div>
                 </article>
             </li>
 
-            <!-- Tarjeta 2: Patio de Armas -->
             <li>
-                <article class="tarjeta" style="background: #ffffff; border-radius: 10px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: transform 0.2s, box-shadow 0.2s;">
-                    <img src="https://unsplash.com" alt="Patio de Armas" style="width: 100%; height: 200px; object-fit: cover;">
-                    <div style="padding: 1.8rem;">
-                        <h3 style="color: #1a252f; margin: 0 0 0.8rem 0; font-size: 1.5rem; font-weight: 700;">Patio de Armas</h3>
-                        <p style="color: #7f8c8d; font-size: 0.95rem; margin: 0 0 1.2rem 0; line-height: 1.5;">Imponente espacio al aire libre rodeado de murallas medievales. Excelente para conciertos masivos y mercados.</p>
-                        <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem; font-size: 0.9rem; color: #34495e; background: #f8fafc; padding: 0.8rem; border-radius: 6px;">
+                <article class="tarjeta-espacio">
+                    <img src="https://unsplash.com" alt="Patio de Armas">
+                    <div class="tarjeta-cuerpo">
+                        <h3>Patio de Armas</h3>
+                        <p>Imponente espacio al aire libre rodeado de murallas medievales. Excelente para conciertos masivos y mercados.</p>
+                        <div class="tarjeta-info">
                             <span><strong>👥 Capacidad:</strong> 500 personas</span>
                             <span><strong>☀️ Tipo:</strong> Exterior Amurallado</span>
                         </div>
-                        <button class="btn-seleccionar" style="background-color: #1a252f; color: white; border: none; padding: 0.9rem; border-radius: 6px; cursor: pointer; font-weight: 700; font-size: 1rem; width: 100%; transition: background-color 0.2s; letter-spacing: 0.5px;">Seleccionar Espacio</button>
+                        <button class="btn-seleccionar">Seleccionar Espacio</button>
                     </div>
                 </article>
             </li>
 
-            <!-- Tarjeta 3: Torre del Homenaje -->
             <li>
-                <article class="tarjeta" style="background: #ffffff; border-radius: 10px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: transform 0.2s, box-shadow 0.2s;">
-                    <img src="https://unsplash.com" alt="Torre del Homenaje" style="width: 100%; height: 200px; object-fit: cover;">
-                    <div style="padding: 1.8rem;">
-                        <h3 style="color: #1a252f; margin: 0 0 0.8rem 0; font-size: 1.5rem; font-weight: 700;">Torre del Homenaje</h3>
-                        <p style="color: #7f8c8d; font-size: 0.95rem; margin: 0 0 1.2rem 0; line-height: 1.5;">El punto más alto de la fortaleza con vistas panorámicas espectaculares del horizonte. Perfecto para fotografía.</p>
-                        <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem; font-size: 0.9rem; color: #34495e; background: #f8fafc; padding: 0.8rem; border-radius: 6px;">
+                <article class="tarjeta-espacio">
+                    <img src="https://unsplash.com" alt="Torre del Homenaje">
+                    <div class="tarjeta-cuerpo">
+                        <h3>Torre del Homenaje</h3>
+                        <p>El punto más alto de la fortaleza con vistas panorámicas espectaculares del horizonte. Perfecto para fotografía.</p>
+                        <div class="tarjeta-info">
                             <span><strong>👥 Capacidad:</strong> 50 personas</span>
                             <span><strong>⛰️ Tipo:</strong> Vistas Panorámicas</span>
                         </div>
-                        <button class="btn-seleccionar" style="background-color: #1a252f; color: white; border: none; padding: 0.9rem; border-radius: 6px; cursor: pointer; font-weight: 700; font-size: 1rem; width: 100%; transition: background-color 0.2s; letter-spacing: 0.5px;">Seleccionar Espacio</button>
+                        <button class="btn-seleccionar">Seleccionar Espacio</button>
                     </div>
                 </article>
             </li>

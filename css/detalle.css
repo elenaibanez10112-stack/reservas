@@ -1,0 +1,75 @@
+/* ESTILOS EXCLUSIVOS PARA DETALLE.HTML */
+.body-detalle {
+    background-color: #f4f6f7;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+}
+
+.main-detalle {
+    max-width: 750px;
+    margin: 3rem auto;
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-top: 6px solid #bfa15f;
+}
+
+.tabla-contenedor {
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    margin-bottom: 2.5rem;
+}
+
+.tabla-premium {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    font-size: 1rem;
+}
+
+.tabla-premium thead tr {
+    background-color: #1a252f;
+    color: white;
+}
+
+.tabla-premium th {
+    padding: 1.2rem;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.tabla-premium tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tabla-premium td {
+    padding: 1.2rem;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.columna-clave {
+    font-weight: 700;
+    color: #1a252f;
+    background: #fdfdfd;
+    border-right: 1px solid #e2e8f0;
+}
+
+.btn-volver {
+    display: block;
+    text-align: center;
+    background-color: #bfa15f;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(191,161,95,0.2);
+    letter-spacing: 0.5px;
+}
