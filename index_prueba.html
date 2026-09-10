@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Prueba Git</title>
+    <!-- 
+      ================================================================
+      DESARROLLADO POR: ELENA (PORTADA DE PRUEBAS DEL MÓDULO)
+      MÓDULO CASTILLO: ENTORNO DE CONTROL Y VERIFICACIÓN LOCAL
+      ================================================================
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entorno de Pruebas - Gestión de Espacios</title>
+    <!-- SINTAXIS CSS: Enlace a la hoja de estilos global compartida por el grupo -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+<body style="background-color: #f4f6f7; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #2c3e50;">
 
-<body>
+    <!-- SINTAXIS HTML: Estructura de la barra de navegación superior de pruebas -->
+    <header style="background-color: #1a252f; color: white; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <h1 style="margin: 0; font-size: 1.6rem; font-weight: 700; letter-spacing: 1px; color: #ffffff;">CASTILLO DE LA GUARDIA</h1>
+        <nav>
+            <a href="index.html" style="color: #ffffff; text-decoration: none; margin-right: 1.8rem; font-weight: 600; font-size: 1rem;">Inicio</a>
+            <a href="listado.html" style="color: #ffffff; text-decoration: none; margin-right: 1.8rem; font-weight: 600; font-size: 1rem;">Reservas</a>
+            <a href="detalle.html" style="color: #ffffff; text-decoration: none; font-weight: 600; font-size: 1rem;">Detail</a>
+        </nav>
+    </header>
 
-  <header>
-    <h1>Prueba Git</h1>
-  </header>
+    <!-- SINTAXIS HTML: Bloque contenedor de la tarjeta principal de pruebas -->
+    <main style="max-width: 600px; margin: 3rem auto; background: #ffffff; padding: 3rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 6px solid #bfa15f;">
+        
+        <!-- Textos informativos del entorno experimental -->
+        <div style="text-align: center; margin-bottom: 2.5rem;">
+            <h2 style="color: #1a252f; margin: 0 0 0.5rem 0; font-size: 2.2rem; font-weight: 800; letter-spacing: 1.5px;">ENTORNO DE PRUEBAS</h2>
+            <p style="color: #bfa15f; font-weight: 700; margin: 0; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 2px;">Simulación de Flujo Local</p>
+        </div>
 
-  <main>
+        <!-- Sección informativa para pruebas del desarrollador -->
+        <section style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+            <h3 style="color: #1a252f; margin-top: 0; font-size: 1.2rem;">Verificación del Módulo</h3>
+            <p style="color: #7f8c8d; font-size: 0.95rem; line-height: 1.5; margin-bottom: 0;">Este archivo se utiliza exclusivamente para comprobar que los archivos de estilos cargan de forma correcta y que el enrutamiento local entre pantallas no genera conflictos en el repositorio.</p>
+        </section>
 
-    <section>
-      <h2>Proyecto de reservas</h2>
+        <!-- Botón interactivo de redirección para salir de la prueba -->
+        <button type="button" onclick="window.location.href='listado.html'" style="background-color: #1a252f; color: white; border: none; padding: 1rem; border-radius: 6px; cursor: pointer; font-weight: 700; font-size: 1.1rem; width: 100%; transition: background-color 0.2s; letter-spacing: 0.5px;">Ir al Listado de Reservas Real &rarr;</button>
 
-      <p>
-        Esta página se utilizará para realizar una prueba
-        de trabajo colaborativo con Git y GitHub.
-      </p>
+    </main>
 
-      <!-- TU APORTACIÓN DEL GRUPO 2 -->
-      <p>
-        Esta página web servirá para gestionar de forma online todas las reservas del Castillo, permitiendo a los ciudadanos solicitar sus pases de forma cómoda.
-      </p>
-
-    </section>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2026</p>
-  </footer>
+    <!-- Pie de página informativo del entorno experimental -->
+    <footer style="text-align: center; padding: 2rem; color: #95a5a6; font-size: 0.85rem; background-color: #ffffff; border-top: 1px solid #e2e8f0; margin-top: 4rem;">
+        <p>&copy; 2026 Módulo Castillo - Vista Exclusiva de Desarrollo</p>
+    </footer>
 
 </body>
-
 </html>

@@ -2,244 +2,77 @@
 <html lang="es">
 
 <head>
+    <!-- 
+      ================================================================
+      DESARROLLADO POR: ELENA (PORTADA PRINCIPAL Y CONTROL DE FLUJO)
+      MÓDULO CASTILLO: FORMULARIO DE INGRESO Y NAVEGACIÓN GENERAL
+      ================================================================
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sistema de Reservas - Castillo de la Guardia</title>
-
-    <link rel="stylesheet" href="styles.css">
+    <title>Reserva de Espacios - Castillo de la Guardia</title>
+    <!-- SINTAXIS CSS: Enlace a la hoja de estilos global compartida por el grupo -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+<body style="background-color: #f4f6f7; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #2c3e50;">
 
-<body class="web-castillo">
-
-    <header>
-        <nav class="navbar">
-            <a href="index.html" class="logo">
-                Castillo de la Guardia
-            </a>
-
-            <ul class="nav-links">
-                <li>
-                    <a href="index.html">Inicio</a>
-                </li>
-
-                <li>
-                    <a href="listado.html">Reservas</a>
-                </li>
-
-                <li>
-                    <a href="detalle.html">Detalle</a>
-                </li>
-            </ul>
+    <!-- SINTAXIS HTML: Estructura de la barra de navegación superior unificada -->
+    <header style="background-color: #1a252f; color: white; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <h1 style="margin: 0; font-size: 1.6rem; font-weight: 700; letter-spacing: 1px; color: #ffffff;">CASTILLO DE LA GUARDIA</h1>
+        <nav>
+            <a href="index.html" style="color: #bfa15f; text-decoration: none; margin-right: 1.8rem; font-weight: 600; font-size: 1rem; border-bottom: 2px solid #bfa15f; padding-bottom: 4px;">Inicio</a>
+            <a href="listado.html" style="color: #ffffff; text-decoration: none; margin-right: 1.8rem; font-weight: 600; font-size: 1rem; transition: color 0.2s;">Reservas</a>
+            <a href="detalle.html" style="color: #ffffff; text-decoration: none; font-weight: 600; font-size: 1rem; transition: color 0.2s;">Detail</a>
         </nav>
-
-        <h1>Castillo de la Guardia</h1>
-        <h2>Formulario de Reserva de Entradas</h2>
     </header>
 
+    <!-- SINTAXIS HTML: Bloque contenedor de la tarjeta principal del formulario -->
+    <main style="max-width: 600px; margin: 3rem auto; background: #ffffff; padding: 3rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 6px solid #bfa15f;">
+        
+        <!-- Textos informativos de presentación de la portada -->
+        <div style="text-align: center; margin-bottom: 2.5rem;">
+            <h2 style="color: #1a252f; margin: 0 0 0.5rem 0; font-size: 2.2rem; font-weight: 800; letter-spacing: 1.5px;">SOLICITUD DE RESERVA</h2>
+            <p style="color: #bfa15f; font-weight: 700; margin: 0; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 2px;">Gestión de Espacios Históricos</p>
+        </div>
 
-    <main>
+        <!-- Formulario estructurado para la entrada de datos del usuario -->
+        <form style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label style="font-weight: 700; color: #1a252f; font-size: 0.95rem;">Nombre Completo:</label>
+                <input type="text" placeholder="Ej. Juan Pérez" style="padding: 0.8rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem; background-color: #f8fafc;">
+            </div>
 
-        <section id="seccion-reserva">
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label style="font-weight: 700; color: #1a252f; font-size: 0.95rem;">Fecha del Evento:</label>
+                <input type="date" style="padding: 0.8rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem; background-color: #f8fafc; color: #2c3e50;">
+            </div>
 
-            <h2>Realiza tu reserva</h2>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label style="font-weight: 700; color: #1a252f; font-size: 0.95rem;">Tipo de Celebración:</label>
+                <select style="padding: 0.8rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem; background-color: #f8fafc; color: #2c3e50;">
+                    <option>Visita Cultural Privada</option>
+                    <option>Banquete o Gala</option>
+                    <option>Sesión Fotográfica Profesional</option>
+                    <option>Concierto o Evento Corporativo</option>
+                </select>
+            </div>
 
-            <p class="descripcion-formulario">
-                Completa los siguientes datos para reservar tu visita al
-                Castillo de la Guardia.
-            </p>
+            <!-- Botón principal de envío que redirige al catálogo de espacios -->
+            <button type="button" onclick="window.location.href='listado.html'" style="background-color: #1a252f; color: white; border: none; padding: 1rem; border-radius: 6px; cursor: pointer; font-weight: 700; font-size: 1.1rem; margin-top: 1rem; transition: background-color 0.2s; letter-spacing: 0.5px;">Continuar al Catálogo &rarr;</button>
+        </form>
 
-            <form id="form-reserva" novalidate>
-
-                <!-- Nombre -->
-                <div class="input-group">
-
-                    <label for="nombre">
-                        Nombre completo:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        placeholder="Ej. Juan Pérez"
-                        required
-                        minlength="3"
-                    >
-
-                    <small class="mensaje-error" id="error-nombre"></small>
-
-                </div>
-
-
-                <!-- Correo -->
-                <div class="input-group">
-
-                    <label for="correo">
-                        Correo electrónico:
-                    </label>
-
-                    <input
-                        type="email"
-                        id="correo"
-                        name="correo"
-                        placeholder="ejemplo@correo.com"
-                        required
-                    >
-
-                    <small class="mensaje-error" id="error-correo"></small>
-
-                </div>
-
-
-                <!-- Número de asistentes -->
-                <div class="input-group">
-
-                    <label for="asistentes">
-                        Número de asistentes:
-                    </label>
-
-                    <input
-                        type="number"
-                        id="asistentes"
-                        name="asistentes"
-                        min="1"
-                        max="5"
-                        placeholder="Máximo 5"
-                        required
-                    >
-
-                    <small class="mensaje-error" id="error-asistentes"></small>
-
-                </div>
-
-
-                <!-- Fecha -->
-                <div class="input-group">
-
-                    <label for="fecha">
-                        Fecha de la visita:
-                    </label>
-
-                    <input
-                        type="date"
-                        id="fecha"
-                        name="fecha"
-                        required
-                    >
-
-                    <small class="mensaje-error" id="error-fecha"></small>
-
-                </div>
-
-
-                <!-- Hora -->
-                <div class="input-group">
-
-                    <label for="hora">
-                        Hora de la visita:
-                    </label>
-
-                    <select id="hora" name="hora" required>
-
-                        <option value="">
-                            Selecciona una hora
-                        </option>
-
-                        <option value="10:00">
-                            10:00
-                        </option>
-
-                        <option value="12:00">
-                            12:00
-                        </option>
-
-                        <option value="16:00">
-                            16:00
-                        </option>
-
-                        <option value="18:00">
-                            18:00
-                        </option>
-
-                    </select>
-
-                    <small class="mensaje-error" id="error-hora"></small>
-
-                </div>
-
-
-                <!-- Tipo de visita -->
-                <div class="input-group">
-
-                    <label for="tipo-visita">
-                        Tipo de visita:
-                    </label>
-
-                    <select id="tipo-visita" name="tipo-visita" required>
-
-                        <option value="">
-                            Selecciona una opción
-                        </option>
-
-                        <option value="visita-guiada">
-                            Visita guiada
-                        </option>
-
-                        <option value="visita-libre">
-                            Visita libre
-                        </option>
-
-                        <option value="visita-educativa">
-                            Visita educativa
-                        </option>
-
-                    </select>
-
-                    <small class="mensaje-error" id="error-tipo-visita"></small>
-
-                </div>
-
-
-                <button type="submit" id="btn-enviar">
-                    Confirmar reserva
-                </button>
-
-            </form>
-
+        <!-- SINTAXIS HTML: Bloque de confirmación ocultado mediante comentarios para limpieza visual -->
+        <!-- 
+        <section id="mensaje-confirmacion" style="margin-top: 2rem; background: #e8f5e9; padding: 1rem; border-radius: 6px; border-left: 5px solid #2e7d32; text-align: center;">
+            <p style="color: #2e7d32; font-weight: bold; margin: 0;">¡Reserva procesada con éxito por el sistema!</p>
         </section>
-
-
-        <!-- Mensaje mostrado cuando la reserva es correcta -->
-
-        <section id="mensaje-confirmacion" hidden>
-
-            <h2>¡Reserva realizada correctamente!</h2>
-
-            <p>
-                Hemos recibido los datos de tu reserva.
-                Gracias por visitar el Castillo de la Guardia.
-            </p>
-
-            <button type="button" id="btn-nueva-reserva">
-                Realizar otra reserva
-            </button>
-
-        </section>
-
+        -->
     </main>
 
-
-    <footer>
-
-        <p>
-            Proyecto de gestión de reservas - Castillo de la Guardia
-        </p>
-
+    <!-- Pie de página general de la aplicación -->
+    <footer style="text-align: center; padding: 2rem; color: #95a5a6; font-size: 0.85rem; background-color: #ffffff; border-top: 1px solid #e2e8f0; margin-top: 4rem;">
+        <p>&copy; 2026 Módulo Castillo - Sistema de Reservas Oficial</p>
     </footer>
-
-
-    <script src="app.js"></script>
 
 </body>
 

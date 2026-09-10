@@ -1,267 +1,125 @@
-/* =========================================================
-   VARIABLES
-========================================================= */
+/* 
 
-:root {
-    --color-principal: #2c3e50;
-    --color-secundario: #b89150;
-    --color-fondo: #f4f6f8;
-    --color-tarjeta: #ffffff;
-    --color-texto: #333333;
-    --color-error: #c0392b;
-    --color-exito: #27ae60;
-
-    --radio: 10px;
-}
-
-
-/* =========================================================
-   CONFIGURACIÓN GENERAL
-========================================================= */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* SINTAXIS CSS: Configuración de la tipografía y los estilos globales del cuerpo */
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    min-height: 100vh;
+    background-color: #f4f6f7;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
 }
 
-
-/* =========================================================
-   NAVEGACIÓN
-========================================================= */
-
-.navbar {
+/* Estilos para el contenedor de la cabecera principal superior */
+header {
+    background-color: #1a252f;
+    color: white;
+    padding: 1.2rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
-
-    width: 100%;
-    padding: 1rem 5%;
-
-    background-color: var(--color-principal);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.logo {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-
-    list-style: none;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-    color: var(--color-secundario);
-}
-
-
-/* =========================================================
-   CABECERA
-========================================================= */
-
-header {
-    text-align: center;
-}
-
+/* Regla visual para el título principal del logotipo */
 header h1 {
-    margin-top: 2rem;
-    color: var(--color-principal);
-    font-size: 2.5rem;
-    text-transform: uppercase;
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
 }
 
-header h2 {
-    margin-top: 0.5rem;
-    color: var(--color-secundario);
-}
-
-
-/* =========================================================
-   CONTENIDO PRINCIPAL
-========================================================= */
-
-main {
-    width: min(600px, 90%);
-    margin: 2rem auto;
-}
-
-
-/* =========================================================
-   FORMULARIO
-========================================================= */
-
-#seccion-reserva,
-#mensaje-confirmacion {
-    background-color: var(--color-tarjeta);
-
-    padding: 2rem;
-
-    border-radius: var(--radio);
-
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-
-    border-top: 5px solid var(--color-secundario);
-}
-
-#seccion-reserva h2 {
-    color: var(--color-principal);
-    margin-bottom: 0.5rem;
-}
-
-.descripcion-formulario {
-    margin-bottom: 1.5rem;
-    color: #666;
-}
-
-
-/* =========================================================
-   CAMPOS
-========================================================= */
-
-.input-group {
-    margin-bottom: 1.25rem;
-}
-
-.input-group label {
-    display: block;
-
-    margin-bottom: 0.5rem;
-
+/* Estilos estructurales para los enlaces de la barra de navegación */
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 1.8rem;
     font-weight: 600;
-
-    color: var(--color-principal);
-}
-
-.input-group input,
-.input-group select {
-    width: 100%;
-
-    padding: 0.8rem;
-
-    border: 1.5px solid #ccc;
-    border-radius: 6px;
-
-    background-color: white;
-
     font-size: 1rem;
+    transition: color 0.2s;
 }
 
-
-/* =========================================================
-   ESTADO FOCUS
-========================================================= */
-
-.input-group input:focus,
-.input-group select:focus {
-    outline: none;
-
-    border-color: var(--color-secundario);
-
-    box-shadow: 0 0 0 3px rgba(184, 145, 80, 0.2);
+/* Efecto visual al pasar el ratón por encima de las opciones del menú */
+nav a:hover {
+    color: #bfa15f;
 }
 
-
-/* =========================================================
-   ERRORES
-========================================================= */
-
-.input-group input.error,
-.input-group select.error {
-    border-color: var(--color-error);
+/* Estilos de la tarjeta blanca centralizada (usada en formularios y bloques de contenido) */
+.main-content, .main-listado, .main-detail {
+    max-width: 600px;
+    margin: 3rem auto;
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-top: 6px solid #bfa15f; /* Detalle del borde dorado superior corporativo */
 }
 
-.mensaje-error {
-    display: block;
-
-    margin-top: 0.4rem;
-
-    color: var(--color-error);
-
-    font-size: 0.85rem;
-}
-
-
-/* =========================================================
-   BOTÓN
-========================================================= */
-
-#btn-enviar,
-#btn-nueva-reserva {
-    width: 100%;
-
-    padding: 0.9rem;
-
-    border: none;
-    border-radius: 6px;
-
-    background-color: var(--color-principal);
-
-    color: white;
-
-    font-size: 1rem;
-    font-weight: 600;
-
-    cursor: pointer;
-}
-
-#btn-enviar:hover,
-#btn-nueva-reserva:hover {
-    background-color: var(--color-secundario);
-}
-
-
-/* =========================================================
-   CONFIRMACIÓN
-========================================================= */
-
-#mensaje-confirmacion {
+/* Diseño de títulos y subtítulos de secciones interiores */
+.form-title {
     text-align: center;
-
-    border-top-color: var(--color-exito);
+    color: #1a252f;
+    margin: 0 0 0.5rem 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
 }
 
-#mensaje-confirmacion h2 {
-    color: var(--color-exito);
-
-    margin-bottom: 1rem;
+.form-subtitle {
+    text-align: center;
+    color: #bfa15f;
+    font-weight: 700;
+    margin: 0 0 2.5rem 0;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
 }
 
-#mensaje-confirmacion p {
-    margin-bottom: 1.5rem;
+/* Estilos para las tarjetas de catálogo (listas de recursos) */
+.tarjeta {
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
 }
 
+/* Formateo de los textos interiores de cada tarjeta */
+.tarjeta h3 {
+    color: #1a252f;
+    margin: 0 0 0.8rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
 
-/* =========================================================
-   FOOTER
-========================================================= */
+/* Estilos para los botones principales de interacción */
+button {
+    background-color: #1a252f;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1rem;
+    width: 100%;
+    transition: background-color 0.2s;
+    letter-spacing: 0.5px;
+}
 
+/* Efecto hover para oscurecer el botón al interactuar */
+button:hover {
+    background-color: #2c3e50;
+}
+
+/* Estilos obligatorios para el pie de página general */
 footer {
     text-align: center;
-
-    padding: 1.5rem;
-
-    color: #666;
+    padding: 2rem;
+    color: #95a5a6;
+    font-size: 0.85rem;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 4rem;
 }
 
 
