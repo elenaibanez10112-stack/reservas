@@ -1,58 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- 
+      ================================================================
+      DESARROLLADO POR: ELENA (PORTADA PRINCIPAL Y CONTROL DE FLUJO)
+      MÓDULO CASTILLO: FORMULARIO DE INGRESO Y NAVEGACIÓN GENERAL
+      ================================================================
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Reservas - Castillo de la Guardia</title>
+    <title>Reserva de Espacios - Castillo de la Guardia</title>
+    <!-- SINTAXIS CSS: Enlace a la hoja de estilos global compartida por el grupo -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body style="background-color: #f4f6f7; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #2c3e50;">
 
-    <header>
-        <h1>Castillo de la Guardia</h1>
-        <h2>Formulario de Reserva de Entradas</h2>
-        <!-- Barra de navegación semántica del Sprint 4 -->
-        <nav style="margin-top: 15px;">
-            <a href="listado.html" style="font-weight: bold; text-decoration: underline;">&rarr; Ver Espacios Disponibles del Castillo (Listado)</a>
+    <!-- SINTAXIS HTML: Estructura de la barra de navegación superior unificada -->
+    <header style="background-color: #1a252f; color: white; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <h1 style="margin: 0; font-size: 1.6rem; font-weight: 700; letter-spacing: 1px; color: #ffffff;">CASTILLO DE LA GUARDIA</h1>
+        <nav>
+            <a href="index.html" style="color: #bfa15f; text-decoration: none; margin-right: 1.8rem; font-weight: 600; font-size: 1rem; border-bottom: 2px solid #bfa15f; padding-bottom: 4px;">Inicio</a>
+            <a href="listado.html" style="color: #ffffff; text-decoration: none; margin-right: 1.8rem; font-weight: 600; font-size: 1rem; transition: color 0.2s;">Reservas</a>
+            <a href="detalle.html" style="color: #ffffff; text-decoration: none; font-weight: 600; font-size: 1rem; transition: color 0.2s;">Detail</a>
         </nav>
     </header>
 
-    <main>
-        <!-- Sección del Formulario principal -->
-        <section id="seccion-reserva">
-            <form id="form-reserva" action="#" method="POST">
-                
-                <div class="input-group">
-                    <label for="nombre">Nombre Completo:</label>
-                </div>
-
-                <div class="input-group">
-                    <label for="correo">Correo Electrónico:</label>
-                    <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com">
-                </div>
-
-                <div class="input-group">
-                    <label for="asistentes">Número de asistentes (Máximo 5):</label>
-                    <input type="number" id="asistentes" name="asistentes" min="1" max="5" required>
-                </div>
-
-                <button type="submit" id="btn-enviar">Confirmar Reserva</button>
-            </form>
-        </section>
+    <!-- SINTAXIS HTML: Bloque contenedor de la tarjeta principal del formulario -->
+    <main style="max-width: 600px; margin: 3rem auto; background: #ffffff; padding: 3rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 6px solid #bfa15f;">
         
-        <!-- Mensaje de confirmación -->
-         <!--
-        <section id="mensaje-confirmacion">
-            <p>¡Reserva procesada!</p>
-        </section>
+        <!-- Textos informativos de presentación de la portada -->
+        <div style="text-align: center; margin-bottom: 2.5rem;">
+            <h2 style="color: #1a252f; margin: 0 0 0.5rem 0; font-size: 2.2rem; font-weight: 800; letter-spacing: 1.5px;">SOLICITUD DE RESERVA</h2>
+            <p style="color: #bfa15f; font-weight: 700; margin: 0; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 2px;">Gestión de Espacios Históricos</p>
+        </div>
 
-        <article>
-            <h3>Visitas Guiadas Nocturnas al Castillo</h3>
-            <p>Disfruta de una experiencia única recorriendo las almenas bajo las estrellas.</p>
-        </article>-->
+        <!-- Formulario estructurado para la entrada de datos del usuario -->
+        <form style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label style="font-weight: 700; color: #1a252f; font-size: 0.95rem;">Nombre Completo:</label>
+                <input type="text" placeholder="Ej. Juan Pérez" style="padding: 0.8rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem; background-color: #f8fafc;">
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label style="font-weight: 700; color: #1a252f; font-size: 0.95rem;">Fecha del Evento:</label>
+                <input type="date" style="padding: 0.8rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem; background-color: #f8fafc; color: #2c3e50;">
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label style="font-weight: 700; color: #1a252f; font-size: 0.95rem;">Tipo de Celebración:</label>
+                <select style="padding: 0.8rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem; background-color: #f8fafc; color: #2c3e50;">
+                    <option>Visita Cultural Privada</option>
+                    <option>Banquete o Gala</option>
+                    <option>Sesión Fotográfica Profesional</option>
+                    <option>Concierto o Evento Corporativo</option>
+                </select>
+            </div>
+
+            <!-- Botón principal de envío que redirige al catálogo de espacios -->
+            <button type="button" onclick="window.location.href='listado.html'" style="background-color: #1a252f; color: white; border: none; padding: 1rem; border-radius: 6px; cursor: pointer; font-weight: 700; font-size: 1.1rem; margin-top: 1rem; transition: background-color 0.2s; letter-spacing: 0.5px;">Continuar al Catálogo &rarr;</button>
+        </form>
+
+        <!-- SINTAXIS HTML: Bloque de confirmación ocultado mediante comentarios para limpieza visual -->
+        <!-- 
+        <section id="mensaje-confirmacion" style="margin-top: 2rem; background: #e8f5e9; padding: 1rem; border-radius: 6px; border-left: 5px solid #2e7d32; text-align: center;">
+            <p style="color: #2e7d32; font-weight: bold; margin: 0;">¡Reserva procesada con éxito por el sistema!</p>
+        </section>
+        -->
     </main>
 
-    <!-- Vinculación de la lógica -->
-    <script src="js/app.js"></script>
+    <!-- Pie de página general de la aplicación -->
+    <footer style="text-align: center; padding: 2rem; color: #95a5a6; font-size: 0.85rem; background-color: #ffffff; border-top: 1px solid #e2e8f0; margin-top: 4rem;">
+        <p>&copy; 2026 Módulo Castillo - Sistema de Reservas Oficial</p>
+    </footer>
+
 </body>
 </html>

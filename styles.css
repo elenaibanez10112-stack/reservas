@@ -1,66 +1,128 @@
-:root {
-    --color-deportivo: #e74c3c; 
-    --color-castillo: #f39c12;   
-    --color-salas: #2ecc71;      
-    --color-principal: #2c3e50;
-    --color-fondo: #f8f9fa;
-    --color-texto: #333333;
-    --color-blanco: #ffffff;
-    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* 
+================================================================
+DOCUMENTADO POR: ELENA (DISEÑO GLOBAL Y COMPONENTES)
+MÓDULO CASTILLO: HOJA DE ESTILOS CORPORATIVOS DEL PROYECTO
+================================================================
+*/
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* SINTAXIS CSS: Configuración de la tipografía y los estilos globales del cuerpo */
 body {
-    font-family: var(--fuente-principal);
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    line-height: 1.6;
+    background-color: #f4f6f7;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
 }
 
+/* Estilos para el contenedor de la cabecera principal superior */
 header {
-    background-color: var(--color-principal);
-    color: var(--color-blanco);
-    padding: 1rem 2rem;
+    background-color: #1a252f;
+    color: white;
+    padding: 1.2rem 2rem;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-}
-
-header nav {
-    display: flex;
-    gap: 1.5rem; 
-}
-
-header nav a {
-    color: var(--color-blanco);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-header nav a:hover {
-    background-color: var(--color-castillo); 
-}
-
-main ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-}
-
-article {
-    background-color: var(--color-blanco);
-    border-top: 5px solid var(--color-castillo); 
-    padding: 1.5rem;
-    border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Regla visual para el título principal del logotipo */
+header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+/* Estilos estructurales para los enlaces de la barra de navegación */
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 1.8rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+/* Efecto visual al pasar el ratón por encima de las opciones del menú */
+nav a:hover {
+    color: #bfa15f;
+}
+
+/* Estilos de la tarjeta blanca centralizada (usada en formularios y bloques de contenido) */
+.main-content, .main-listado, .main-detail {
+    max-width: 600px;
+    margin: 3rem auto;
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-top: 6px solid #bfa15f; /* Detalle del borde dorado superior corporativo */
+}
+
+/* Diseño de títulos y subtítulos de secciones interiores */
+.form-title {
+    text-align: center;
+    color: #1a252f;
+    margin: 0 0 0.5rem 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.form-subtitle {
+    text-align: center;
+    color: #bfa15f;
+    font-weight: 700;
+    margin: 0 0 2.5rem 0;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+}
+
+/* Estilos para las tarjetas de catálogo (listas de recursos) */
+.tarjeta {
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+
+/* Formateo de los textos interiores de cada tarjeta */
+.tarjeta h3 {
+    color: #1a252f;
+    margin: 0 0 0.8rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Estilos para los botones principales de interacción */
+button {
+    background-color: #1a252f;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1rem;
+    width: 100%;
+    transition: background-color 0.2s;
+    letter-spacing: 0.5px;
+}
+
+/* Efecto hover para oscurecer el botón al interactuar */
+button:hover {
+    background-color: #2c3e50;
+}
+
+/* Estilos obligatorios para el pie de página general */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #95a5a6;
+    font-size: 0.85rem;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 4rem;
 }
