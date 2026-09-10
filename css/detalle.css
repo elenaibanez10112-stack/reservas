@@ -1,4 +1,11 @@
-/* ESTILOS EXCLUSIVOS PARA DETALLE.HTML */
+/* 
+================================================================
+DESARROLLADO POR: ELENA (DISEÑO EXCLUSIVO DE LA FICHA TÉCNICA)
+MÓDULO CASTILLO: HOJA DE ESTILOS PARA DETALLE.HTML
+================================================================
+*/
+
+/* SINTAXIS CSS: Configuración de fuentes y colores de fondo */
 .body-detalle {
     background-color: #f4f6f7;
     margin: 0;
@@ -6,6 +13,7 @@
     color: #2c3e50;
 }
 
+/* Bloque centralizado de la ficha de detalle */
 .main-detalle {
     max-width: 750px;
     margin: 3rem auto;
@@ -16,6 +24,7 @@
     border-top: 6px solid #bfa15f;
 }
 
+/* Caja de la tabla con bordes redondeados */
 .tabla-contenedor {
     overflow: hidden;
     border-radius: 8px;
@@ -24,6 +33,7 @@
     margin-bottom: 2.5rem;
 }
 
+/* Estilos de la tabla de especificaciones técnicas */
 .tabla-premium {
     width: 100%;
     border-collapse: collapse;
@@ -53,6 +63,7 @@
     line-height: 1.6;
 }
 
+/* Primera columna con etiquetas destacadas */
 .columna-clave {
     font-weight: 700;
     color: #1a252f;
@@ -60,6 +71,7 @@
     border-right: 1px solid #e2e8f0;
 }
 
+/* Botón inferior de retorno */
 .btn-volver {
     display: block;
     text-align: center;
