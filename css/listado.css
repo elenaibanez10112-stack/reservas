@@ -1,4 +1,11 @@
-/* ESTILOS EXCLUSIVOS PARA LISTADO.HTML */
+/* 
+================================================================
+DESARROLLADO POR: ELENA (DISEÑO EXCLUSIVO DEL CATÁLOGO)
+MÓDULO CASTILLO: HOJA DE ESTILOS PARA LISTADO.HTML
+================================================================
+*/
+
+/* SINTAXIS CSS: Configuración del fondo y tipografía de la página */
 .body-listado {
     background-color: #f4f6f7;
     margin: 0;
@@ -6,6 +13,7 @@
     color: #2c3e50;
 }
 
+/* Contenedor de la barra de navegación superior */
 .header-premium {
     background-color: #1a252f;
     color: white;
@@ -24,6 +32,7 @@
     color: #ffffff;
 }
 
+/* Enlaces del menú superior */
 .nav-enlace {
     color: #ffffff;
     text-decoration: none;
@@ -39,6 +48,7 @@
     padding-bottom: 4px;
 }
 
+/* Bloque blanco central que envuelve el catálogo */
 .main-listado {
     max-width: 700px;
     margin: 3rem auto;
@@ -49,6 +59,7 @@
     border-top: 6px solid #bfa15f;
 }
 
+/* Títulos principales del catálogo */
 .titulo-seccion {
     text-align: center;
     margin-bottom: 2.5rem;
@@ -71,6 +82,7 @@
     letter-spacing: 2px;
 }
 
+/* Estructura del contenedor de las tarjetas */
 .lista-tarjetas {
     list-style: none;
     padding: 0;
@@ -80,6 +92,7 @@
     gap: 2rem;
 }
 
+/* Estilo individual para cada tarjeta de espacio */
 .tarjeta-espacio {
     background: #ffffff;
     border-radius: 10px;
@@ -112,6 +125,7 @@
     line-height: 1.5;
 }
 
+/* Bloque interior con datos de capacidad y tipo */
 .tarjeta-info {
     display: flex;
     gap: 1.5rem;
@@ -123,6 +137,7 @@
     border-radius: 6px;
 }
 
+/* Botones interactivos del catálogo */
 .btn-seleccionar {
     background-color: #1a252f;
     color: white;
