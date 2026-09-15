@@ -1,9 +1,4 @@
 /* 
-================================================================
-DOCUMENTADO POR: ELENA (DISEÑO GLOBAL Y COMPONENTES)
-MÓDULO CASTILLO: HOJA DE ESTILOS CORPORATIVOS DEL PROYECTO
-================================================================
-*/
 
 /* SINTAXIS CSS: Configuración de la tipografía y los estilos globales del cuerpo */
 body {
@@ -125,4 +120,35 @@ footer {
     background-color: #ffffff;
     border-top: 1px solid #e2e8f0;
     margin-top: 4rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE - MÓVIL
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    #seccion-reserva,
+    #mensaje-confirmacion {
+        padding: 1.25rem;
+    }
+
 }
