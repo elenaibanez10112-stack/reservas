@@ -1,103 +1,76 @@
-// ------------------------------
-// Gestión de Reservas - Castillo de la Guardia
-// ------------------------------
-
-const STORAGE_KEY = 'reservas';
+/**
+ * @file app.js
+ * @description Lógica global, formulario de reserva y dinamismo de detalles para index.html.
+ */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('form-reserva');
-    const mensajeConfirmacion = document.getElementById('mensaje-confirmacion');
+    
+    // Mensaje de comprobación inicial
+    console.log('Módulo Castillo: Página de inicio cargada correctamente.');
 
-    // Ocultamos el mensaje de confirmación al cargar la página
-    mensajeConfirmacion.style.display = 'none';
+    /*
+     * FORMULARIO DE RESERVA (index.html)
+     */
+    const formulario = document.getElementById("formularioReserva");
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        manejarEnvioReserva();
-    });
+    if (formulario) {
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault();
 
-    function manejarEnvioReserva() {
-        const nombre = document.getElementById('nombre').value.trim();
-        const correo = document.getElementById('correo').value.trim();
-        const asistentes = parseInt(document.getElementById('asistentes').value, 10);
+            const nombre = document.getElementById("nombre").value.trim();
+            const fecha = document.getElementById("fecha").value;
 
-        // Validación
-        const errores = validarReserva(nombre, correo, asistentes);
-        if (errores.length > 0) {
-            alert('Por favor corrige lo siguiente:\n- ' + errores.join('\n- '));
-            return;
-        }
+            if (nombre === "" || fecha === "") {
+                alert("Por favor, completa todos los campos.");
+                return;
+            }
 
-        // Comprobar si el correo ya tiene una reserva
-        const reservas = obtenerReservas();
-        const yaExiste = reservas.some(r => r.correo.toLowerCase() === correo.toLowerCase());
-        if (yaExiste) {
-            const continuar = confirm('Ya existe una reserva con este correo. ¿Deseas añadir otra de todas formas?');
-            if (!continuar) return;
-        }
+            const mensajeReserva = document.getElementById("mensajeReserva");
+            if (mensajeReserva) {
+                mensajeReserva.style.display = "block";
+            }
 
-        // Crear objeto de reserva
-        const nuevaReserva = {
-            id: generarId(),
-            nombre,
-            correo,
-            asistentes,
-            fecha: new Date().toISOString()
-        };
-
-        reservas.push(nuevaReserva);
-        guardarReservas(reservas);
-
-        mostrarConfirmacion(nuevaReserva);
-        form.reset();
+            setTimeout(function() {
+                const seccionReservas = document.getElementById("reservas");
+                if (seccionReservas) {
+                    seccionReservas.scrollIntoView({
+                        behavior: "smooth"
+                    });
+                }
+            }, 500);
+        });
     }
 
-    function validarReserva(nombre, correo, asistentes) {
-        const errores = [];
-        const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (!nombre) errores.push('El nombre es obligatorio.');
-        if (!correo || !regexCorreo.test(correo)) errores.push('Introduce un correo electrónico válido.');
-        if (isNaN(asistentes) || asistentes < 1 || asistentes > 5) {
-            errores.push('El número de asistentes debe estar entre 1 y 5.');
-        }
-        return errores;
-    }
-
-    function mostrarConfirmacion(reserva) {
-        mensajeConfirmacion.innerHTML = `
-            <p>¡Reserva procesada! Gracias, <strong>${reserva.nombre}</strong>.</p>
-            <p>Hemos registrado ${reserva.asistentes} asistente(s) con el correo ${reserva.correo}.</p>
-        `;
-        mensajeConfirmacion.style.display = 'block';
-
-        // Ocultarlo tras unos segundos (opcional)
-        setTimeout(() => {
-            mensajeConfirmacion.style.display = 'none';
-        }, 6000);
-    }
-
-    function generarId() {
-        return 'res_' + Date.now() + '_' + Math.floor(Math.random() * 1000);
-    }
 });
 
-// ------------------------------
-// Funciones de acceso a localStorage
-// (exportadas de forma sencilla para que listado.html pueda reutilizarlas
-//  si incluye este mismo archivo)
-// ------------------------------
+/*
+ * CAMBIO DINÁMICO DEL DETALLE
+ * (Permanece fuera de DOMContentLoaded para atender llamadas onclick desde el HTML)
+ */
+function mostrarDetalle(espacio) {
+    const descripcion = document.getElementById("detalleDescripcion");
+    const aforo = document.getElementById("detalleAforo");
 
-function obtenerReservas() {
-    const datos = localStorage.getItem(STORAGE_KEY);
-    return datos ? JSON.parse(datos) : [];
-}
+    if (!descripcion || !aforo) return;
 
-function guardarReservas(reservas) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(reservas));
-}
-
-function eliminarReserva(id) {
-    const reservas = obtenerReservas().filter(r => r.id !== id);
-    guardarReservas(reservas);
+    if (espacio === "Salón del Trono") {
+        descripcion.textContent = "Estancia señorial de la alta nobleza decorada con tapices históricos tejidos a mano, escudos heráldicos familiares y arquitectura gótica original en techos altos.";
+        aforo.textContent = "Máximo 150 personas de forma simultánea cumpliendo normativas estrictas de seguridad.";
+    } 
+    else if (espacio === "Patio de Armas") {
+        descripcion.textContent = "Imponente espacio exterior rodeado por murallas medievales, ideal para conciertos, mercados y grandes eventos.";
+        aforo.textContent = "Máximo 500 personas de forma simultánea, sujeto a las condiciones de seguridad del evento.";
+    } 
+    else if (espacio === "Torre del Homenaje") {
+        descripcion.textContent = "Torre histórica situada en el punto más alto de la fortaleza, con vistas panorámicas y espacios especialmente indicados para fotografía.";
+        aforo.textContent = "Máximo 50 personas de forma simultánea debido a las características y altura del espacio.";
+    } 
+    else if (espacio === "Jardines Reales") {
+        descripcion.textContent = "Extensa zona ajardinada con fuentes históricas, diseñada para paseos exclusivos, recepciones y actividades al aire libre.";
+        aforo.textContent = "Máximo 300 personas de forma simultánea, dependiendo de la distribución del evento.";
+    } 
+    else if (espacio === "Sala Histórica") {
+        descripcion.textContent = "Sala dedicada a la conservación y exposición de elementos relacionados con la historia y patrimonio del Castillo de la Guardia.";
+        aforo.textContent = "Máximo 100 personas de forma simultánea respetando las normas de seguridad y conservación.";
+    }
 }
