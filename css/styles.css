@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+/* 
+================================================================
+DISEÑO GLOBAL UNIFICADO Y OPTIMIZADO POR: ELENA
+MÓDULO CASTILLO: HOJA DE ESTILOS ABSOLUTA DEL PROYECTO (SPRINT 7)
+================================================================
+*/
+
+/* 1. ESTILOS GLOBALES Y CONFIGURACIÓN DEL CUERPO */
+body {
+    background-color: #f4f6f7;
+    margin: 0;
+=======
 /* ==========================================
    1. ESTILOS GENERALES Y REINICIO
    ========================================== */
@@ -5,21 +18,33 @@ body {
     background-color: #f4f6f7;
     margin: 0;
     padding: 0;
+>>>>>>> f967a48b762bae540e3443bcf7ab52fe9094e3ef
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #2c3e50;
 }
 
+<<<<<<< HEAD
+/* 2. CABECERA PREMIUM COMÚN A TODAS LAS PÁGINAS */
+header {
+    background-color: #1a252f;
+    color: white;
+=======
 /* ==========================================
    2. CABECERA Y NAVEGACIÓN
    ========================================== */
 header {
     background-color: #1a252f;
     color: #ffffff;
+>>>>>>> f967a48b762bae540e3443bcf7ab52fe9094e3ef
     padding: 1.2rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+=======
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+>>>>>>> f967a48b762bae540e3443bcf7ab52fe9094e3ef
 }
 
 header h1 {
@@ -30,12 +55,27 @@ header h1 {
     color: #ffffff;
 }
 
+<<<<<<< HEAD
+nav a, .nav-enlace {
+=======
 nav a {
+>>>>>>> f967a48b762bae540e3443bcf7ab52fe9094e3ef
     color: #ffffff;
     text-decoration: none;
     margin-right: 1.8rem;
     font-weight: 600;
     font-size: 1rem;
+<<<<<<< HEAD
+    transition: color 0.2s;
+}
+
+nav a:hover, .nav-enlace:hover {
+    color: #bfa15f;
+}
+
+/* Selector activo para saber en qué página estamos */
+nav a.active, .nav-enlace.activo {
+=======
     transition: color 0.2s ease;
 }
 
@@ -45,20 +85,34 @@ nav a:last-child {
 
 nav a.activo, 
 nav a[href="listado.html"] {
+>>>>>>> f967a48b762bae540e3443bcf7ab52fe9094e3ef
     color: #bfa15f;
     border-bottom: 2px solid #bfa15f;
     padding-bottom: 4px;
 }
 
+<<<<<<< HEAD
+/* 3. CONTENEDORES PRINCIPALES (TARJETAS CENTRADAS) */
+.main-content, .main-listado, .main-detalle, .box {
+=======
 /* ==========================================
    3. CONTENEDOR PRINCIPAL
    ========================================== */
 main {
+>>>>>>> f967a48b762bae540e3443bcf7ab52fe9094e3ef
     max-width: 700px;
     margin: 3rem auto;
     background: #ffffff;
     padding: 3rem;
     border-radius: 12px;
+<<<<<<< HEAD
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-top: 6px solid #bfa15f; /* Borde dorado corporativo */
+}
+
+.titulo-seccion, .form-title {
+    text-align: center;
+=======
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     border-top: 6px solid #bfa15f;
 }
@@ -70,6 +124,7 @@ main > div:first-child {
 }
 
 main h2 {
+>>>>>>> f967a48b762bae540e3443bcf7ab52fe9094e3ef
     color: #1a252f;
     margin: 0 0 0.5rem 0;
     font-size: 2.2rem;
@@ -77,21 +132,34 @@ main h2 {
     letter-spacing: 1.5px;
 }
 
+<<<<<<< HEAD
+.form-subtitle, .titulo-seccion p {
+    text-align: center;
+    color: #bfa15f;
+    font-weight: 700;
+    margin: 0 0 2.5rem 0;
+=======
 main p.subtitulo,
 main > div:first-child p {
     color: #bfa15f;
     font-weight: 700;
     margin: 0;
+>>>>>>> f967a48b762bae540e3443bcf7ab52fe9094e3ef
     text-transform: uppercase;
     font-size: 0.95rem;
     letter-spacing: 2px;
 }
 
+<<<<<<< HEAD
+/* 4. COMPONENTES DEL CATÁLOGO DE ESPACIOS (TARJETAS) */
+.tarjetas-container, .lista-tarjetas {
+=======
 /* ==========================================
    4. TARJETAS Y GRID DE ESPACIOS
    ========================================== */
 .tarjetas-container,
 ul {
+>>>>>>> f967a48b762bae540e3443bcf7ab52fe9094e3ef
     list-style: none;
     padding: 0;
     margin: 0;
@@ -100,11 +168,30 @@ ul {
     gap: 2rem;
 }
 
+<<<<<<< HEAD
+.tarjeta, .tarjeta-espacio {
+=======
 .tarjeta {
+>>>>>>> f967a48b762bae540e3443bcf7ab52fe9094e3ef
     background: #ffffff;
     border-radius: 10px;
     border: 1px solid #e2e8f0;
     overflow: hidden;
+<<<<<<< HEAD
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta img, .tarjeta-espacio img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 3px solid #bfa15f;
+}
+
+.tarjeta-info {
+=======
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.3s ease;
 }
@@ -135,6 +222,7 @@ ul {
 
 /* Información técnica (Capacidad y Tipo) */
 .tarjeta div > div {
+>>>>>>> f967a48b762bae540e3443bcf7ab52fe9094e3ef
     display: flex;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
@@ -145,6 +233,82 @@ ul {
     border-radius: 6px;
 }
 
+<<<<<<< HEAD
+/* 5. BOTONES DE INTERACCIÓN GENERAL Y FORMULARIOS */
+button, .btn {
+    background-color: #1a252f;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1rem;
+    width: 100%;
+    transition: background-color 0.2s;
+    letter-spacing: 0.5px;
+}
+
+button:hover, .btn:hover {
+    background-color: #2c3e50;
+}
+
+/* 6. TABLA PREMIUM DE LA FICHA TÉCNICA DE DETALLE */
+.tabla-contenedor {
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    margin-bottom: 2.5rem;
+}
+
+.tabla-premium {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    font-size: 1rem;
+}
+
+.tabla-premium thead tr {
+    background-color: #1a252f;
+    color: white;
+}
+
+.tabla-premium th, .tabla-premium td {
+    padding: 1.2rem;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.tabla-premium th {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.columna-clave {
+    font-weight: 700;
+    color: #1a252f;
+    background: #fdfdfd;
+    border-right: 1px solid #e2e8f0;
+    width: 35%;
+}
+
+.btn-volver {
+    display: block;
+    text-align: center;
+    background-color: #bfa15f;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(191,161,95,0.2);
+    letter-spacing: 0.5px;
+}
+
+/* 7. PIE DE PÁGINA COMÚN */
+=======
 /* Estado de selección activado por Elena mediante JS */
 .tarjeta.tarjeta-seleccionada {
     border: 2px solid #28a745;
@@ -173,6 +337,7 @@ ul {
 /* ==========================================
    5. PIE DE PÁGINA Y ADAPTABILIDAD
    ========================================== */
+>>>>>>> f967a48b762bae540e3443bcf7ab52fe9094e3ef
 footer {
     text-align: center;
     padding: 2rem;
@@ -182,6 +347,8 @@ footer {
     border-top: 1px solid #e2e8f0;
     margin-top: 4rem;
 }
+<<<<<<< HEAD
+=======
 
 @media (max-width: 767px) {
     header {
@@ -195,3 +362,4 @@ footer {
         padding: 1.5rem;
     }
 }
+>>>>>>> f967a48b762bae540e3443bcf7ab52fe9094e3ef
