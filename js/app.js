@@ -5,39 +5,55 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Mensaje de comprobación inicial
     console.log('Módulo Castillo: Página de inicio cargada correctamente.');
 
     /*
      * FORMULARIO DE RESERVA (index.html)
      */
-    const formulario = document.getElementById("formularioReserva");
+    // Selecciona el formulario aunque no tenga id="formularioReserva"
+    const formulario = document.getElementById("formularioReserva") || document.querySelector("form");
 
     if (formulario) {
         formulario.addEventListener("submit", function(event) {
             event.preventDefault();
 
-            const nombre = document.getElementById("nombre").value.trim();
-            const fecha = document.getElementById("fecha").value;
+            // Buscar inputs por id o por tipo/posición si no tienen ID
+            const inputNombre = document.getElementById("nombre") || formulario.querySelector('input[type="text"]');
+            const inputFecha = document.getElementById("fecha") || formulario.querySelector('input[type="date"]');
+
+            const nombre = inputNombre ? inputNombre.value.trim() : "";
+            const fecha = inputFecha ? inputFecha.value : "";
 
             if (nombre === "" || fecha === "") {
-                alert("Por favor, completa todos los campos.");
+                alert("Por favor, completa todos los campos del formulario.");
                 return;
             }
 
-            const mensajeReserva = document.getElementById("mensajeReserva");
-            if (mensajeReserva) {
-                mensajeReserva.style.display = "block";
+            // Buscar o crear contenedor para el mensaje de confirmación
+            let mensajeReserva = document.getElementById("mensajeReserva");
+
+            if (!mensajeReserva) {
+                mensajeReserva = document.createElement("div");
+                mensajeReserva.id = "mensajeReserva";
+                mensajeReserva.style.padding = "15px";
+                mensajeReserva.style.marginTop = "15px";
+                mensajeReserva.style.backgroundColor = "#d4edda";
+                mensajeReserva.style.color = "#155724";
+                mensajeReserva.style.borderRadius = "5px";
+                mensajeReserva.style.fontWeight = "bold";
+                mensajeReserva.style.textAlign = "center";
+                
+                formulario.appendChild(mensajeReserva);
             }
 
+            // Insertar texto de confirmación y mostrar
+            mensajeReserva.innerHTML = `¡Reserva solicitada con éxito para <strong>${nombre}</strong> el día <strong>${fecha}</strong>! Redirigiendo al catálogo...`;
+            mensajeReserva.style.display = "block";
+
+            // Redirigir al catálogo tras 2 segundos de visualización
             setTimeout(function() {
-                const seccionReservas = document.getElementById("reservas");
-                if (seccionReservas) {
-                    seccionReservas.scrollIntoView({
-                        behavior: "smooth"
-                    });
-                }
-            }, 500);
+                window.location.href = "listado.html";
+            }, 2000);
         });
     }
 
@@ -45,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /*
  * CAMBIO DINÁMICO DEL DETALLE
- * (Permanece fuera de DOMContentLoaded para atender llamadas onclick desde el HTML)
  */
 function mostrarDetalle(espacio) {
     const descripcion = document.getElementById("detalleDescripcion");
