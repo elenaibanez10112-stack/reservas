@@ -7,8 +7,9 @@
 // SINTAXIS PHP: Importamos el archivo lógico de conexión desarrollado previamente
 include 'conexion.php';
 
-// Escribimos la sentencia SQL para extraer los datos almacenados en la tabla de recursos
-$sql = "SELECT id_recurso, nombre, descripción, capacidad, tipo FROM RECURSOS";
+// ✔️ DESPUÉS (corregido según el documento):
+// Se cambia 'descripción' por 'descripcion' (sin tilde) para que coincida con el CREATE TABLE
+$sql = "SELECT id_recurso, nombre, descripcion, capacidad, tipo FROM RECURSOS";
 $resultado = mysqli_query($conexion, $sql);
 ?>
 
@@ -40,12 +41,13 @@ $resultado = mysqli_query($conexion, $sql);
 
         <?php
         // Verificamos si la consulta SQL ha devuelto registros en las filas de la tabla
-        if (mysqli_num_rows($resultado) > 0) {
+        if ($resultado && mysqli_num_rows($resultado) > 0) {
             // SINTAXIS PHP: Recorremos los datos fila por fila mediante un bucle while y mysqli_fetch_assoc
             while($recurso = mysqli_fetch_assoc($resultado)) {
                 echo "<div class='tarjeta-recurso'>";
                 echo "<h3>" . htmlspecialchars($recurso['nombre']) . "</h3>";
-                echo "<p>" . htmlspecialchars($recurso['descripción']) . "</p>";
+                // ✔️ DESPUÉS (corregido según el documento):
+                echo "<p>" . htmlspecialchars($recurso['descripcion']) . "</p>";
                 echo "<p><strong>👥 Capacidad:</strong> " . htmlspecialchars($recurso['capacidad']) . " personas | <strong>🏰 Tipo:</strong> " . htmlspecialchars($recurso['tipo']) . "</p>";
                 echo "</div>";
             }

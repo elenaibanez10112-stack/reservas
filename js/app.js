@@ -1,6 +1,6 @@
 /**
  * @file app.js
- * @description Lógica global, formulario de reserva y dinamismo de detalles para index.html.
+ * @description Lógica global, formulario de reserva (Backend PHP) y dinamismo de detalles para index.html.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,52 +8,36 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Módulo Castillo: Página de inicio cargada correctamente.');
 
     /*
-     * FORMULARIO DE RESERVA (index.html)
+     * FORMULARIO DE RESERVA (index.html) - Punto 2.1 Backend PHP
      */
-    // Selecciona el formulario aunque no tenga id="formularioReserva"
     const formulario = document.getElementById("formularioReserva") || document.querySelector("form");
 
     if (formulario) {
         formulario.addEventListener("submit", function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Evita el envío tradicional por HTML
 
-            // Buscar inputs por id o por tipo/posición si no tienen ID
-            const inputNombre = document.getElementById("nombre") || formulario.querySelector('input[type="text"]');
-            const inputFecha = document.getElementById("fecha") || formulario.querySelector('input[type="date"]');
+            // Recoge los campos del formulario dinámicamente
+            const datos = new FormData(formulario);
 
-            const nombre = inputNombre ? inputNombre.value.trim() : "";
-            const fecha = inputFecha ? inputFecha.value : "";
-
-            if (nombre === "" || fecha === "") {
-                alert("Por favor, completa todos los campos del formulario.");
-                return;
-            }
-
-            // Buscar o crear contenedor para el mensaje de confirmación
-            let mensajeReserva = document.getElementById("mensajeReserva");
-
-            if (!mensajeReserva) {
-                mensajeReserva = document.createElement("div");
-                mensajeReserva.id = "mensajeReserva";
-                mensajeReserva.style.padding = "15px";
-                mensajeReserva.style.marginTop = "15px";
-                mensajeReserva.style.backgroundColor = "#d4edda";
-                mensajeReserva.style.color = "#155724";
-                mensajeReserva.style.borderRadius = "5px";
-                mensajeReserva.style.fontWeight = "bold";
-                mensajeReserva.style.textAlign = "center";
-                
-                formulario.appendChild(mensajeReserva);
-            }
-
-            // Insertar texto de confirmación y mostrar
-            mensajeReserva.innerHTML = `¡Reserva solicitada con éxito para <strong>${nombre}</strong> el día <strong>${fecha}</strong>! Redirigiendo al catálogo...`;
-            mensajeReserva.style.display = "block";
-
-            // Redirigir al catálogo tras 2 segundos de visualización
-            setTimeout(function() {
-                window.location.href = "listado.html";
-            }, 2000);
+            // Envía los datos reales al script PHP procesar_reserva.php
+            fetch('procesar_reserva.php', {
+                method: 'POST',
+                body: datos
+            })
+            .then(respuesta => respuesta.json())
+            .then(resultado => {
+                if (resultado.exito) {
+                    alert(resultado.mensaje);
+                    // Redirige al catálogo tras guardar la reserva en la base de datos
+                    window.location.href = 'listado.html';
+                } else {
+                    alert('Error al registrar la reserva: ' + resultado.mensaje);
+                }
+            })
+            .catch(error => {
+                console.error('Error al conectar con el servidor PHP:', error);
+                alert('No se pudo enviar la solicitud al servidor PHP.');
+            });
         });
     }
 

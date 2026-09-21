@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -413,10 +412,7 @@
 
 <body>
 
-    <!-- ========================================================= -->
-    <!-- CABECERA Y NAVEGACIÓN                                    -->
-    <!-- ========================================================= -->
-
+    <!-- CABECERA Y NAVEGACIÓN -->
     <header>
         <h1>CASTILLO DE LA GUARDIA</h1>
 
@@ -430,10 +426,7 @@
     </header>
 
 
-    <!-- ========================================================= -->
-    <!-- INICIO / FORMULARIO DE RESERVA                           -->
-    <!-- ========================================================= -->
-
+    <!-- INICIO / FORMULARIO DE RESERVA -->
     <section id="inicio" class="seccion">
 
         <main class="tarjeta-principal">
@@ -492,10 +485,7 @@
     </section>
 
 
-    <!-- ========================================================= -->
-    <!-- CATÁLOGO / RESERVAS                                      -->
-    <!-- ========================================================= -->
-
+    <!-- CATÁLOGO / RESERVAS -->
     <section id="reservas" class="seccion">
 
         <main class="contenedor">
@@ -510,13 +500,10 @@
             <ul class="listado-grid">
 
                 <!-- SALÓN DEL TRONO -->
-
                 <li>
                     <article class="tarjeta">
 
-                        <div class="tarjeta-icono">
-                            🏰
-                        </div>
+                        <div class="tarjeta-icono">🏰</div>
 
                         <div class="tarjeta-contenido">
 
@@ -554,13 +541,10 @@
 
 
                 <!-- PATIO DE ARMAS -->
-
                 <li>
                     <article class="tarjeta">
 
-                        <div class="tarjeta-icono">
-                            ⚔️
-                        </div>
+                        <div class="tarjeta-icono">⚔️</div>
 
                         <div class="tarjeta-contenido">
 
@@ -598,13 +582,10 @@
 
 
                 <!-- TORRE DEL HOMENAJE -->
-
                 <li>
                     <article class="tarjeta">
 
-                        <div class="tarjeta-icono">
-                            🏰
-                        </div>
+                        <div class="tarjeta-icono">🏰</div>
 
                         <div class="tarjeta-contenido">
 
@@ -642,13 +623,10 @@
 
 
                 <!-- JARDINES REALES -->
-
                 <li>
                     <article class="tarjeta">
 
-                        <div class="tarjeta-icono">
-                            🌿
-                        </div>
+                        <div class="tarjeta-icono">🌿</div>
 
                         <div class="tarjeta-contenido">
 
@@ -686,13 +664,10 @@
 
 
                 <!-- SALA HISTÓRICA -->
-
                 <li>
                     <article class="tarjeta">
 
-                        <div class="tarjeta-icono">
-                            📜
-                        </div>
+                        <div class="tarjeta-icono">📜</div>
 
                         <div class="tarjeta-contenido">
 
@@ -734,16 +709,13 @@
     </section>
 
 
-    <!-- ========================================================= -->
-    <!-- DETALLE TÉCNICO                                          -->
-    <!-- ========================================================= -->
-
+    <!-- DETALLE TÉCNICO -->
     <section id="detalle" class="seccion">
 
         <main class="tarjeta-principal">
 
             <div class="titulo-seccion">
-                <h2>FICHA TÉCNICA</h2>
+                <h2 id="detalleTitulo">FICHA TÉCNICA</h2>
 
                 <p class="subtitulo">
                     Especificaciones detalladas del recurso
@@ -789,7 +761,7 @@
                         <tr>
                             <td>✨ Infraestructura</td>
 
-                            <td>
+                            <td id="detalleInfraestructura">
                                 Accesibilidad garantizada para movilidad
                                 reducida, sistemas integrados de iluminación
                                 artística focalizada y sistema de climatización
@@ -813,10 +785,7 @@
     </section>
 
 
-    <!-- ========================================================= -->
-    <!-- RECURSOS                                                  -->
-    <!-- ========================================================= -->
-
+    <!-- RECURSOS -->
     <section id="recursos" class="seccion">
 
         <main class="contenedor">
@@ -888,10 +857,7 @@
     </section>
 
 
-    <!-- ========================================================= -->
-    <!-- ENTORNO DE PRUEBAS                                       -->
-    <!-- ========================================================= -->
-
+    <!-- ENTORNO DE PRUEBAS -->
     <section id="pruebas" class="seccion">
 
         <main class="tarjeta-principal">
@@ -950,10 +916,7 @@
     </section>
 
 
-    <!-- ========================================================= -->
-    <!-- PIE DE PÁGINA                                             -->
-    <!-- ========================================================= -->
-
+    <!-- PIE DE PÁGINA -->
     <footer>
 
         <p>
@@ -963,11 +926,60 @@
     </footer>
 
 
-    <!-- ========================================================= -->
-    <!-- JAVASCRIPT INTEGRADO                                     -->
-    <!-- ========================================================= -->
+    <!-- JAVASCRIPT INTEGRADO -->
+    <script>
+        // Datos informativos para alimentar la Ficha Técnica
+        const espaciosData = {
+            'Salón del Trono': {
+                descripcion: 'Estancia señorial de la alta nobleza decorada con tapices históricos tejidos a mano, escudos heráldicos familiares y arquitectura gótica original en techos altos.',
+                aforo: 'Máximo 150 personas de forma simultánea cumpliendo normativas estrictas de seguridad.',
+                infraestructura: 'Accesibilidad garantizada para movilidad reducida, sistemas integrados de iluminación artística focalizada y sistema de climatización pasiva ecológica medieval.'
+            },
+            'Patio de Armas': {
+                descripcion: 'Imponente plaza central descubierta rodeada por murallas medievales de piedra vista y torres defensivas.',
+                aforo: 'Capacidad amplia de hasta 500 personas para actos masivos.',
+                infraestructura: 'Acceso directo para montaje de escenarios, conexiones eléctricas reforzadas para megafonía e iluminación exterior.'
+            },
+            'Torre del Homenaje': {
+                descripcion: 'Estructura defensiva con vistas privilegiadas en 360 grados de todo el valle y la fortificación.',
+                aforo: 'Reducido a máximo 50 personas debido a las características arquitectónicas originales.',
+                infraestructura: 'Acceso por escalera de caracol restaurada, iluminación sutil de protección patrimonial y mirador acondicionado.'
+            },
+            'Jardines Reales': {
+                descripcion: 'Zonas verdes históricas con vegetación autóctona, fuentes ornamentales y paseos empedrados.',
+                aforo: 'Capacidad autorizada de 300 personas.',
+                infraestructura: 'Puntos de agua corriente, iluminación ambiental de senderos y áreas sombreadas bajo arboleda centenaria.'
+            },
+            'Sala Histórica': {
+                descripcion: 'Galería con exposición permanente de artefactos medievales, documentos antiguos y maquetas expositivas.',
+                aforo: 'Capacidad media para 100 personas.',
+                infraestructura: 'Sistemas de climatización y control de humedad de precisión para la conservación del patrimonio.'
+            }
+        };
 
-<!-- Vinculación del script externo de la página principal -->
-    <script src="js/app.js"></script>
+        // Función para cambiar dinámicamente la Ficha Técnica al pulsar un botón
+        function mostrarDetalle(nombreEspacio) {
+            const espacio = espaciosData[nombreEspacio];
+            if (espacio) {
+                document.getElementById('detalleTitulo').textContent = `FICHA TÉCNICA - ${nombreEspacio.toUpperCase()}`;
+                document.getElementById('detalleDescripcion').textContent = espacio.descripcion;
+                document.getElementById('detalleAforo').textContent = espacio.aforo;
+                document.getElementById('detalleInfraestructura').textContent = espacio.infraestructura;
+            }
+        }
+
+        // Manejo del evento del formulario de reserva
+        document.getElementById('formularioReserva').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const mensaje = document.getElementById('mensajeReserva');
+            mensaje.style.display = 'block';
+            
+            // Desplazamiento suave al catálogo tras enviar
+            setTimeout(() => {
+                document.getElementById('reservas').scrollIntoView({ behavior: 'smooth' });
+            }, 600);
+        });
+    </script>
 </body>
+
 </html>

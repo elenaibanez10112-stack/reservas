@@ -19,5 +19,5 @@ if (!$conexion) {
 }
 
 // Configuración de codificación UTF-8 para procesar de forma correcta caracteres especiales
-mysqli_set_charset($conexion, "utf8");
+mysqli_set_charset($conexion, "utf8mb4");
 ?>
