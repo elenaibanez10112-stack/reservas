@@ -73,3 +73,6 @@ function mostrarDetalle(espacio) {
         aforo.textContent = "Máximo 100 personas de forma simultánea respetando las normas de seguridad y conservación.";
     }
 }
+<select id="espacio">
+    <!--Se rellena con JavaScript desde listar_recursos.php, usando el id_recurso real de cada espacio-->
+</select>

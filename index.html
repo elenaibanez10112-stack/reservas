@@ -233,8 +233,7 @@
             background-color: #bfa15f;
         }
 
-        /* DETALLE */
-
+        /* DETALLE (PUNTO 3.3) */
         .tabla-contenedor {
             overflow: hidden;
             border-radius: 8px;
@@ -414,11 +413,10 @@
 
     <!-- CABECERA Y NAVEGACIÓN -->
     <header>
-        <h1>CASTILLO DE LA GUARDIA</h1>
-
+            }
         <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#reservas">Reservas</a>
+            .tabla-contenedor {
+                overflow-x: auto;
             <a href="#detalle">Detalle</a>
             <a href="#recursos">Recursos</a>
             <a href="#pruebas">Pruebas</a>
@@ -426,240 +424,101 @@
     </header>
 
 
-    <!-- INICIO / FORMULARIO DE RESERVA -->
-    <section id="inicio" class="seccion">
+</head>
+
+<body>
+
+    <!-- CABECERA Y NAVEGACIÓN -->
+    <header>
+    <header>
+        <nav>
+
+            <a href="#solicitud">Reserva</a>
+            <a href="#detalle">Detalle</a>
+            <a href="#recursos">Recursos</a>
+            <a href="#pruebas">Pruebas</a>
+        </nav>
+    </header>
+
+
+
 
         <main class="tarjeta-principal">
 
-            <div class="titulo-seccion">
-                <h2>SOLICITUD DE RESERVA</h2>
-                <p class="subtitulo">
-                    Gestión de Espacios Históricos
-                </p>
+        <!-- PUNTO 3.1: Formulario de Solicitud de Reserva -->
+        <section id="solicitud" class="seccion">
+            <div class="tarjeta-principal">
+                <div class="titulo-seccion">
+                    <p class="subtitulo">Gestión de Espacios</p>
+
+
+
+                <form id="formReserva" action="procesar_reserva.php" method="POST">
+                    <div class="campo">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+
+
+                    <div class="campo">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+
+                    <div class="campo">
+                        <label for="espacio">Espacio a Reservar:</label>
+                        <select id="espacio" name="espacio" required>
+
+                            <option value="Salón del Trono">Salón del Trono</option>
+                            <option value="Patio de Armas">Patio de Armas</option>
+                            <option value="Torre del Homenaje">Torre del Homenaje</option>
+                            <option value="Jardines Reales">Jardines Reales</option>
+
+                        </select>
+
             </div>
 
-            <form id="formularioReserva">
-
-                <div class="campo">
-                    <label for="nombre">Nombre Completo:</label>
-                    <input
-                        type="text"
-                        id="nombre"
-                        placeholder="Ej. Juan Pérez"
-                        required>
-                </div>
-
-                <div class="campo">
-                    <label for="fecha">Fecha del Evento:</label>
-                    <input
-                        type="date"
-                        id="fecha"
-                        required>
-                </div>
-
-                <div class="campo">
-                    <label for="tipo">Tipo de Celebración:</label>
-
-                    <select id="tipo">
-                        <option>Visita Cultural Privada</option>
-                        <option>Banquete o Gala</option>
-                        <option>Sesión Fotográfica Profesional</option>
-                        <option>Concierto o Evento Corporativo</option>
-                    </select>
-                </div>
-
-                <button
-                    type="submit"
-                    class="boton-principal">
-                    Continuar al Catálogo →
-                </button>
-
-            </form>
-
-            <div id="mensajeReserva" class="mensaje">
-                ¡Datos de reserva preparados correctamente!
-            </div>
-
-        </main>
-
-    </section>
-
-
-    <!-- CATÁLOGO / RESERVAS -->
-    <section id="reservas" class="seccion">
-
-        <main class="contenedor">
+                        <label for="fecha">Fecha de la Reserva:</label>
+                        <input type="date" id="fecha" name="fecha" required>
 
             <div class="titulo-seccion">
-                <h2>CATÁLOGO DE ESPACIOS</h2>
-                <p class="subtitulo">
-                    Selecciona el escenario para tu experiencia
-                </p>
+                    <div class="campo">
             </div>
 
             <ul class="listado-grid">
 
-                <!-- SALÓN DEL TRONO -->
-                <li>
-                    <article class="tarjeta">
+                    <div class="campo">
+                        <label for="hora_fin">Hora de Fin:</label>
+                        <input type="time" id="hora_fin" name="hora_fin" required>
 
-                        <div class="tarjeta-icono">🏰</div>
 
-                        <div class="tarjeta-contenido">
+                    <button type="submit" class="boton-principal">Confirmar Reserva</button>
+                </li>
 
-                            <h3>Salón del Trono</h3>
 
-                            <p>
-                                Estancia principal decorada con tapices
-                                históricos y arquitectura gótica original.
-                                Ideal para ceremonias de gran gala.
-                            </p>
 
-                            <div class="informacion">
-                                <span>
-                                    <strong>👥 Capacidad:</strong>
-                                    150 personas
-                                </span>
-
-                                <span>
-                                    <strong>🏰 Tipo:</strong>
-                                    Interior Histórico
-                                </span>
-                            </div>
-
-                            <a
-                                href="#detalle"
-                                class="boton"
-                                onclick="mostrarDetalle('Salón del Trono')">
-                                Ver detalle
-                            </a>
-
-                        </div>
+        <!-- PUNTO 3.2: Catálogo de Espacios Disponibles -->
+            <div class="titulo-seccion">
+            <div class="titulo-seccion">
+            </div>
 
                     </article>
                 </li>
 
 
-                <!-- PATIO DE ARMAS -->
-                <li>
-                    <article class="tarjeta">
-
-                        <div class="tarjeta-icono">⚔️</div>
-
-                        <div class="tarjeta-contenido">
-
-                            <h3>Patio de Armas</h3>
-
-                            <p>
-                                Imponente espacio al aire libre rodeado
-                                de murallas medievales. Excelente para
-                                conciertos masivos y mercados.
-                            </p>
-
-                            <div class="informacion">
-                                <span>
-                                    <strong>👥 Capacidad:</strong>
-                                    500 personas
-                                </span>
-
-                                <span>
-                                    <strong>☀️ Tipo:</strong>
-                                    Exterior Amurallado
-                                </span>
-                            </div>
-
-                            <a
-                                href="#detalle"
-                                class="boton"
-                                onclick="mostrarDetalle('Patio de Armas')">
-                                Ver detalle
-                            </a>
-
-                        </div>
-
-                    </article>
+                <li class="tarjeta">
+                    <div class="tarjeta-icono">🏛️</div>
+                    <div class="tarjeta-contenido">
+                        <h3>Salón del Trono</h3>
+                        <p>Estancia señorial de la alta nobleza decorada con tapices históricos.</p>
+                </li>
                 </li>
 
 
-                <!-- TORRE DEL HOMENAJE -->
-                <li>
-                    <article class="tarjeta">
-
-                        <div class="tarjeta-icono">🏰</div>
-
-                        <div class="tarjeta-contenido">
-
-                            <h3>Torre del Homenaje</h3>
-
-                            <p>
-                                El punto más alto de la fortaleza con
-                                vistas panorámicas espectaculares del
-                                horizonte. Perfecto para fotografía.
-                            </p>
-
-                            <div class="informacion">
-                                <span>
-                                    <strong>👥 Capacidad:</strong>
-                                    50 personas
-                                </span>
-
-                                <span>
-                                    <strong>⛰️ Tipo:</strong>
-                                    Vistas Panorámicas
-                                </span>
-                            </div>
-
-                            <a
-                                href="#detalle"
-                                class="boton"
-                                onclick="mostrarDetalle('Torre del Homenaje')">
-                                Ver detalle
-                            </a>
-
-                        </div>
-
-                    </article>
-                </li>
-
-
-                <!-- JARDINES REALES -->
-                <li>
-                    <article class="tarjeta">
-
-                        <div class="tarjeta-icono">🌿</div>
-
-                        <div class="tarjeta-contenido">
-
-                            <h3>Jardines Reales</h3>
-
-                            <p>
-                                Extensa zona verde con fuentes históricas
-                                para paseos exclusivos y actividades
-                                al aire libre.
-                            </p>
-
-                            <div class="informacion">
-                                <span>
-                                    <strong>👥 Capacidad:</strong>
-                                    300 personas
-                                </span>
-
-                                <span>
-                                    <strong>🌿 Tipo:</strong>
-                                    Exterior
-                                </span>
-                            </div>
-
-                            <a
-                                href="#detalle"
-                                class="boton"
-                                onclick="mostrarDetalle('Jardines Reales')">
-                                Ver detalle
-                            </a>
-
-                        </div>
-
-                    </article>
+                <li class="tarjeta">
+                    <div class="tarjeta-icono">🏰</div>
+                    <div class="tarjeta-contenido">
+                        <h3>Patio de Armas</h3>
+                        <p>Imponente espacio exterior rodeado por murallas medievales.</p>
                 </li>
 
 
@@ -703,17 +562,11 @@
                 </li>
 
             </ul>
-
-        </main>
-
-    </section>
-
-
-    <!-- DETALLE TÉCNICO -->
-    <section id="detalle" class="seccion">
-
-        <main class="tarjeta-principal">
-
+                <li class="tarjeta">
+                    <div class="tarjeta-icono">🗼</div>
+                    <div class="tarjeta-contenido">
+                        <h3>Torre del Homenaje</h3>
+                        <p>Punto más alto de la fortaleza con vistas panorámicas excepcionales.</p>
             <div class="titulo-seccion">
                 <h2 id="detalleTitulo">FICHA TÉCNICA</h2>
 
@@ -739,14 +592,8 @@
                     <tbody>
 
                         <tr>
-                            <td>🏛️ Descripción</td>
 
-                            <td id="detalleDescripcion">
-                                Estancia señorial de la alta nobleza
-                                decorada con tapices históricos tejidos
-                                a mano, escudos heráldicos familiares
-                                y arquitectura gótica original en techos altos.
-                            </td>
+            <div class="tabla-contenedor">
                         </tr>
 
                         <tr>
@@ -773,23 +620,13 @@
 
                 </table>
 
+                        </tr>
             </div>
 
 
-            <a href="#reservas" class="volver">
-                ← Volver al catálogo de espacios
-            </a>
 
-        </main>
-
-    </section>
-
-
-    <!-- RECURSOS -->
-    <section id="recursos" class="seccion">
-
-        <main class="contenedor">
-
+                            <td id="detalleInfraestructura">
+                                Accesibilidad garantizada para movilidad
             <div class="titulo-seccion">
 
                 <h2>RECURSOS DEL CASTILLO</h2>
@@ -803,53 +640,13 @@
 
             <div class="recursos">
 
-                <article class="recurso">
-
-                    <h3>Visitas guiadas</h3>
-
-                    <p>
-                        Recorridos guiados por el Castillo de la Guardia
-                        para conocer su historia y patrimonio.
-                    </p>
-
-                </article>
 
 
-                <article class="recurso">
 
-                    <h3>Eventos culturales</h3>
+        <!-- Sección de Recursos Auxiliares -->
+            <div class="titulo-seccion">
 
-                    <p>
-                        Espacios y actividades destinados a eventos
-                        culturales y actividades municipales.
-                    </p>
-
-                </article>
-
-
-                <article class="recurso">
-
-                    <h3>Actividades educativas</h3>
-
-                    <p>
-                        Actividades educativas para centros escolares
-                        y grupos de visitantes.
-                    </p>
-
-                </article>
-
-
-                <article class="recurso">
-
-                    <h3>Actos municipales</h3>
-
-                    <p>
-                        Espacios disponibles para actos y actividades
-                        organizadas por el Ayuntamiento.
-                    </p>
-
-                </article>
-
+                <h2>RECURSOS DEL CASTILLO</h2>
             </div>
 
         </main>
@@ -918,68 +715,11 @@
 
     <!-- PIE DE PÁGINA -->
     <footer>
-
-        <p>
-            &copy; 2026 Castillo de la Guardia - Equipo 2
-        </p>
-
+                    Visitas guiadas al Castillo
     </footer>
 
 
-    <!-- JAVASCRIPT INTEGRADO -->
-    <script>
-        // Datos informativos para alimentar la Ficha Técnica
-        const espaciosData = {
-            'Salón del Trono': {
-                descripcion: 'Estancia señorial de la alta nobleza decorada con tapices históricos tejidos a mano, escudos heráldicos familiares y arquitectura gótica original en techos altos.',
-                aforo: 'Máximo 150 personas de forma simultánea cumpliendo normativas estrictas de seguridad.',
-                infraestructura: 'Accesibilidad garantizada para movilidad reducida, sistemas integrados de iluminación artística focalizada y sistema de climatización pasiva ecológica medieval.'
-            },
-            'Patio de Armas': {
-                descripcion: 'Imponente plaza central descubierta rodeada por murallas medievales de piedra vista y torres defensivas.',
-                aforo: 'Capacidad amplia de hasta 500 personas para actos masivos.',
-                infraestructura: 'Acceso directo para montaje de escenarios, conexiones eléctricas reforzadas para megafonía e iluminación exterior.'
-            },
-            'Torre del Homenaje': {
-                descripcion: 'Estructura defensiva con vistas privilegiadas en 360 grados de todo el valle y la fortificación.',
-                aforo: 'Reducido a máximo 50 personas debido a las características arquitectónicas originales.',
-                infraestructura: 'Acceso por escalera de caracol restaurada, iluminación sutil de protección patrimonial y mirador acondicionado.'
-            },
-            'Jardines Reales': {
-                descripcion: 'Zonas verdes históricas con vegetación autóctona, fuentes ornamentales y paseos empedrados.',
-                aforo: 'Capacidad autorizada de 300 personas.',
-                infraestructura: 'Puntos de agua corriente, iluminación ambiental de senderos y áreas sombreadas bajo arboleda centenaria.'
-            },
-            'Sala Histórica': {
-                descripcion: 'Galería con exposición permanente de artefactos medievales, documentos antiguos y maquetas expositivas.',
-                aforo: 'Capacidad media para 100 personas.',
-                infraestructura: 'Sistemas de climatización y control de humedad de precisión para la conservación del patrimonio.'
-            }
-        };
-
-        // Función para cambiar dinámicamente la Ficha Técnica al pulsar un botón
-        function mostrarDetalle(nombreEspacio) {
-            const espacio = espaciosData[nombreEspacio];
-            if (espacio) {
-                document.getElementById('detalleTitulo').textContent = `FICHA TÉCNICA - ${nombreEspacio.toUpperCase()}`;
-                document.getElementById('detalleDescripcion').textContent = espacio.descripcion;
-                document.getElementById('detalleAforo').textContent = espacio.aforo;
-                document.getElementById('detalleInfraestructura').textContent = espacio.infraestructura;
-            }
-        }
-
-        // Manejo del evento del formulario de reserva
-        document.getElementById('formularioReserva').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const mensaje = document.getElementById('mensajeReserva');
-            mensaje.style.display = 'block';
-            
-            // Desplazamiento suave al catálogo tras enviar
-            setTimeout(() => {
-                document.getElementById('reservas').scrollIntoView({ behavior: 'smooth' });
-            }, 600);
-        });
-    </script>
+                    Reserva una visita guiada para conocer la historia
 </body>
 
 </html>
