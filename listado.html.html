@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- 
+      ================================================================
+      DESARROLLADO POR: ELENA (INTERACTIVIDAD Y DOM)
+      MÓDULO CASTILLO: COMPONENTES DEL SPRINT DE JAVASCRIPT BÁSICO
+      ================================================================
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Castillo: Gestión de Espacios</title>
+    <!-- Hoja de estilos compartida por todas las páginas -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Cabecera de navegación principal -->
+    <header>
+        <h1>CASTILLO DE LA GUARDIA</h1>
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="listado.html" class="activo" aria-current="page">Reservas</a>
+            <a href="detalle.html">Detalle</a>
+        </nav>
+    </header>
+
+    <section class="seccion">
+
+        <main class="contenedor">
+
+            <!-- Zona del título superior del catálogo -->
+            <div class="titulo-seccion">
+                <h2>CATÁLOGO DE ESPACIOS</h2>
+                <p class="subtitulo">Selecciona el escenario para tu experiencia</p>
+            </div>
+
+            <!-- Cuadrícula de 2 columnas, igual que en index.html -->
+            <ul class="listado-grid">
+
+                <!-- Tarjeta 1: Salón del Trono -->
+                <li>
+                    <article class="tarjeta">
+                        <img src="documentación/imagenes/trono.jpg" alt="Salón del Trono">
+                        <div class="tarjeta-contenido">
+                            <h3>Salón del Trono</h3>
+                            <p>Estancia principal decorada con tapices históricos y arquitectura gótica original. Ideal para ceremonias de gran gala.</p>
+                            <div class="informacion">
+                                <span><strong>👥 Capacidad:</strong> 150 personas</span>
+                                <span><strong>🏰 Tipo:</strong> Interior Histórico</span>
+                            </div>
+                            <!-- .btn-seleccionar es el gancho que usa el JavaScript -->
+                            <button type="button" class="boton btn-seleccionar">Ver detalle</button>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- Tarjeta 2: Patio de Armas -->
+                <li>
+                    <article class="tarjeta">
+                        <img src="documentación/imagenes/patio.jpg" alt="Patio de Armas">
+                        <div class="tarjeta-contenido">
+                            <h3>Patio de Armas</h3>
+                            <p>Imponente espacio al aire libre rodeado de murallas medievales. Excelente para conciertos masivos y mercados.</p>
+                            <div class="informacion">
+                                <span><strong>👥 Capacidad:</strong> 500 personas</span>
+                                <span><strong>☀️ Tipo:</strong> Exterior Amurallado</span>
+                            </div>
+                            <button type="button" class="boton btn-seleccionar">Ver detalle</button>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- Tarjeta 3: Torre del Homenaje -->
+                <li>
+                    <article class="tarjeta">
+                        <img src="documentación/imagenes/torre.jpg" alt="Torre del Homenaje">
+                        <div class="tarjeta-contenido">
+                            <h3>Torre del Homenaje</h3>
+                            <p>El punto más alto de la fortaleza con vistas panorámicas espectaculares del horizonte. Perfecto para fotografía.</p>
+                            <div class="informacion">
+                                <span><strong>👥 Capacidad:</strong> 50 personas</span>
+                                <span><strong>⛰️ Tipo:</strong> Vistas Panorámicas</span>
+                            </div>
+                            <button type="button" class="boton btn-seleccionar">Ver detalle</button>
+                        </div>
+                    </article>
+                </li>
+
+            </ul>
+
+        </main>
+
+    </section>
+
+    <!-- Pie de página informativo -->
+    <footer>
+        <p>&copy; 2026 Módulo Castillo - Trabajo de Diseño Avanzado</p>
+    </footer>
+
+    <!-- Script de la carpeta js/ (js/practica_sprint.js ya no existe en el repositorio) -->
+    <script src="js/main.js"></script>
+</body>
+</html>
