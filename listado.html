@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Módulo Castillo: Gestión de Espacios</title>
-    <!-- Vinculación de las hojas de estilo externas -->
+    <!-- Hoja de estilos compartida por todas las páginas -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -18,7 +18,6 @@
     <!-- Cabecera de navegación principal -->
     <header>
         <h1>CASTILLO DE LA GUARDIA</h1>
-        <!-- Menú de navegación principal -->
         <nav aria-label="Navegación principal">
             <a href="index.html">Inicio</a>
             <a href="listado.html" class="activo" aria-current="page">Reservas</a>
@@ -26,87 +25,80 @@
         </nav>
     </header>
 
-    <!-- Bloque contenedor principal -->
-    <main>
-        
-        <!-- Zona del título superior del catálogo -->
-        <div class="header-catalogo">
-            <h2>CATÁLOGO DE ESPACIOS</h2>
-            <p class="subtitulo">Selecciona el escenario para tu experiencia</p>
-        </div>
-        
-        <!-- Lista ordenada que almacena las tarjetas de los espacios -->
-        <ul class="tarjetas-container">
-            
-            <!-- Tarjeta 1: Salón del Trono -->
-            <li>
-                <article class="tarjeta" style="background: #ffffff; border-radius: 10px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: transform 0.2s, box-shadow 0.2s;">
-                    <!-- RUTA CORREGIDA: Apuntando exactamente a la carpeta con tilde como la tienes a la izquierda -->
-                    <img src="documentación/trono.jpg" alt="Salón del Trono" style="width: 100%; height: 220px; object-fit: cover; display: block; border-bottom: 3px solid #bfa15f;">
-                    <div style="padding: 1.8rem;">
-                        <h3 style="color: #1a252f; margin: 0 0 0.8rem 0; font-size: 1.5rem; font-weight: 700;">Salón del Trono</h3>
-                        <p style="color: #7f8c8d; font-size: 0.95rem; margin: 0 0 1.2rem 0; line-height: 1.5;">Estancia principal decorada con tapices históricos y arquitectura gótica original. Ideal para ceremonias de gran gala.</p>
-                        <!-- Información técnica obligatoria para el usuario -->
-                        <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem; font-size: 0.9rem; color: #34495e; background: #f8fafc; padding: 0.8rem; border-radius: 6px;">
-                            <span><strong>👥 Capacidad:</strong> 150 personas</span>
-                            <span><strong>🏰 Tipo:</strong> Interior Histórico</span>
-                        </div>
-                        
-                        <!-- Botón interactivo que activará el evento de selección -->
-                        <button class="btn-seleccionar">Ver detalle</button>
-                    </div>
-                </article>
-            </li>
+    <section class="seccion">
 
-            <!-- Tarjeta 2: Patio de Armas -->
-            <li>
-                <article class="tarjeta" style="background: #ffffff; border-radius: 10px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: transform 0.2s, box-shadow 0.2s;">
-                    <!-- RUTA CORREGIDA: Apuntando exactamente a la carpeta con tilde como la tienes a la izquierda -->
-                    <img src="documentación/patio.jpg" alt="Patio de Armas" style="width: 100%; height: 220px; object-fit: cover; display: block; border-bottom: 3px solid #bfa15f;">
-                    <div style="padding: 1.8rem;">
-                        <h3 style="color: #1a252f; margin: 0 0 0.8rem 0; font-size: 1.5rem; font-weight: 700;">Patio de Armas</h3>
-                        <p style="color: #7f8c8d; font-size: 0.95rem; margin: 0 0 1.2rem 0; line-height: 1.5;">Imponente espacio al aire libre rodeado de murallas medievales. Excelente para conciertos masivos y mercados.</p>
-                        <!-- Información de aforo externo -->
-                        <div>
-                            <span><strong>👥 Capacidad:</strong> 500 personas</span>
-                            <span><strong>☀️ Tipo:</strong> Exterior Amurallado</span>
-                        </div>
-                        
-                        <!-- Botón interactivo -->
-                        <button class="btn-seleccionar">Ver detalle</button>
-                    </div>
-                </article>
-            </li>
+        <main class="contenedor">
 
-            <!-- Tarjeta 3: Torre del Homenaje -->
-            <li>
-                <article class="tarjeta" style="background: #ffffff; border-radius: 10px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: transform 0.2s, box-shadow 0.2s;">
-                    <!-- RUTA CORREGIDA: Apuntando exactamente a la carpeta con tilde como la tienes a la izquierda -->
-                    <img src="documentación/torre.jpg" alt="Torre del Homenaje" style="width: 100%; height: 220px; object-fit: cover; display: block; border-bottom: 3px solid #bfa15f;">
-                    <div style="padding: 1.8rem;">
-                        <h3 style="color: #1a252f; margin: 0 0 0.8rem 0; font-size: 1.5rem; font-weight: 700;">Torre del Homenaje</h3>
-                        <p style="color: #7f8c8d; font-size: 0.95rem; margin: 0 0 1.2rem 0; line-height: 1.5;">El punto más alto de la fortaleza con vistas panorámicas espectaculares del horizonte. Perfecto para fotografía.</p>
-                        <!-- Información de altura y aforo limitado -->
-                        <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem; font-size: 0.9rem; color: #34495e; background: #f8fafc; padding: 0.8rem; border-radius: 6px;">
-                            <span><strong>👥 Capacidad:</strong> 50 personas</span>
-                            <span><strong>⛰️ Tipo:</strong> Vistas Panorámicas</span>
-                        </div>
-                        
-                        <!-- Botón interactivo -->
-                        <button class="btn-seleccionar">Ver detalle</button>
-                    </div>
-                </article>
-            </li>
+            <!-- Zona del título superior del catálogo -->
+            <div class="titulo-seccion">
+                <h2>CATÁLOGO DE ESPACIOS</h2>
+                <p class="subtitulo">Selecciona el escenario para tu experiencia</p>
+            </div>
 
-        </ul>
-    </main>
+            <!-- Cuadrícula de 2 columnas, igual que en index.html -->
+            <ul class="listado-grid">
+
+                <!-- Tarjeta 1: Salón del Trono -->
+                <li>
+                    <article class="tarjeta">
+                        <img src="documentación/imagenes/trono.jpg" alt="Salón del Trono">
+                        <div class="tarjeta-contenido">
+                            <h3>Salón del Trono</h3>
+                            <p>Estancia principal decorada con tapices históricos y arquitectura gótica original. Ideal para ceremonias de gran gala.</p>
+                            <div class="informacion">
+                                <span><strong>👥 Capacidad:</strong> 150 personas</span>
+                                <span><strong>🏰 Tipo:</strong> Interior Histórico</span>
+                            </div>
+                            <!-- .btn-seleccionar es el gancho que usa el JavaScript -->
+                            <button type="button" class="boton btn-seleccionar">Ver detalle</button>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- Tarjeta 2: Patio de Armas -->
+                <li>
+                    <article class="tarjeta">
+                        <img src="documentación/imagenes/patio.jpg" alt="Patio de Armas">
+                        <div class="tarjeta-contenido">
+                            <h3>Patio de Armas</h3>
+                            <p>Imponente espacio al aire libre rodeado de murallas medievales. Excelente para conciertos masivos y mercados.</p>
+                            <div class="informacion">
+                                <span><strong>👥 Capacidad:</strong> 500 personas</span>
+                                <span><strong>☀️ Tipo:</strong> Exterior Amurallado</span>
+                            </div>
+                            <button type="button" class="boton btn-seleccionar">Ver detalle</button>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- Tarjeta 3: Torre del Homenaje -->
+                <li>
+                    <article class="tarjeta">
+                        <img src="documentación/imagenes/torre.jpg" alt="Torre del Homenaje">
+                        <div class="tarjeta-contenido">
+                            <h3>Torre del Homenaje</h3>
+                            <p>El punto más alto de la fortaleza con vistas panorámicas espectaculares del horizonte. Perfecto para fotografía.</p>
+                            <div class="informacion">
+                                <span><strong>👥 Capacidad:</strong> 50 personas</span>
+                                <span><strong>⛰️ Tipo:</strong> Vistas Panorámicas</span>
+                            </div>
+                            <button type="button" class="boton btn-seleccionar">Ver detalle</button>
+                        </div>
+                    </article>
+                </li>
+
+            </ul>
+
+        </main>
+
+    </section>
 
     <!-- Pie de página informativo -->
     <footer>
         <p>&copy; 2026 Módulo Castillo - Trabajo de Diseño Avanzado</p>
     </footer>
 
-    <!-- Conexión con el archivo JS dentro de la carpeta js/ -->
-    <script src="js/practica_sprint.js"></script>
+    <!-- Script de la carpeta js/ (js/practica_sprint.js ya no existe en el repositorio) -->
+    <script src="js/main.js"></script>
 </body>
 </html>
