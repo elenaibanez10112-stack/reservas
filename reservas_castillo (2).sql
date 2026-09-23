@@ -23,7 +23,8 @@ CREATE TABLE IF NOT EXISTS USUARIOS (
     id_usuario   INT AUTO_INCREMENT PRIMARY KEY,
     nombre       VARCHAR(100) NOT NULL,
     apellidos    VARCHAR(150) NOT NULL,
-    email        VARCHAR(150) NOT NULL UNIQUE
+  email        VARCHAR(150) NOT NULL UNIQUE,
+  telefono     VARCHAR(30)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- -----------------------------------------
@@ -46,7 +47,7 @@ CREATE TABLE IF NOT EXISTS RESERVAS (
     id_usuario   INT NOT NULL,
     id_recurso   INT NOT NULL,
     fecha        DATE NOT NULL,
-    hora         TIME NOT NULL,
+    hora         TIME NULL,
     estado       VARCHAR(20) NOT NULL DEFAULT 'pendiente',
 
     CONSTRAINT fk_reserva_usuario

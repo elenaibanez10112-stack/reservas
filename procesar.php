@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = mysqli_real_escape_string($conexion, $_POST['nombre_usuario']);
     $apellidos = mysqli_real_escape_string($conexion, $_POST['apellidos_usuario']);
     $email = mysqli_real_escape_string($conexion, $_POST['email_usuario']);
-    $telefono = mysqli_real_escape_string($conexion, $_POST['telefono_usuario']);
+    $telefono = mysqli_real_escape_string($conexion, $_POST['telefono_usuario'] ?? '');
     $fecha = mysqli_real_escape_string($conexion, $_POST['fecha']);
     $id_recurso = intval($_POST['id_recurso']);
     $estado_defecto = "pendiente";
