@@ -152,3 +152,288 @@ footer {
     }
 
 }
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f6f7;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2c3e50;
+        }
+
+        header {
+            background-color: #1a252f;
+            color: white;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-right: 1.8rem;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #bfa15f;
+        }
+
+        nav a:last-child {
+            margin-right: 0;
+        }
+
+        .seccion {
+            min-height: 100vh;
+            padding: 3rem 1.5rem;
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .tarjeta-principal {
+            max-width: 750px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-top: 6px solid #bfa15f;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .titulo-seccion h2 {
+            color: #1a252f;
+            margin: 0 0 0.5rem 0;
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+        }
+
+        .subtitulo {
+            color: #bfa15f;
+            font-weight: 700;
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+        }
+
+        /* FORMULARIO */
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .campo {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .campo label {
+            font-weight: 700;
+            color: #1a252f;
+            font-size: 0.95rem;
+        }
+
+        .campo input,
+        .campo select {
+            padding: 0.8rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+            background-color: #f8fafc;
+            color: #2c3e50;
+        }
+
+        .boton-principal {
+            background-color: #1a252f;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            transition: background-color 0.2s;
+            letter-spacing: 0.5px;
+        }
+
+        .boton-principal:hover {
+            background-color: #bfa15f;
+        }
+
+        /* CATÁLOGO */
+
+        .listado-grid {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .tarjeta {
+            background: #ffffff;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+            height: 100%;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .tarjeta-icono {
+            font-size: 3rem;
+            text-align: center;
+            padding: 2rem 1rem 0.5rem;
+        }
+
+        .tarjeta-contenido {
+            padding: 1.8rem;
+        }
+
+        .tarjeta h3 {
+            color: #1a252f;
+            margin: 0 0 0.8rem 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .tarjeta p {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            margin: 0 0 1.2rem 0;
+            line-height: 1.5;
+        }
+
+        .informacion {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #34495e;
+            background: #f8fafc;
+            padding: 0.8rem;
+            border-radius: 6px;
+        }
+
+        .boton {
+            display: block;
+            width: 100%;
+            background-color: #1a252f;
+            color: white;
+            border: none;
+            padding: 0.9rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .boton:hover {
+            background-color: #bfa15f;
+        }
+
+        /* DETALLE */
+
+        .tabla-contenedor {
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            margin-bottom: 2.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+            font-size: 1rem;
+        }
+
+        thead {
+            background-color: #1a252f;
+            color: white;
+        }
+
+        th {
+            padding: 1.2rem;
+            text-align: left;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 1.2rem;
+            line-height: 1.6;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        td:first-child {
+            font-weight: 700;
+            color: #1a252f;
+            background: #fdfdfd;
+            border-right: 1px solid #e2e8f0;
+            width: 35%;
+        }
+
+        .volver {
+            display: block;
+            text-align: center;
+            background-color: #bfa15f;
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+            box-shadow: 0 4px 10px rgba(191, 161, 95, 0.2);
+        }
+
+        .volver:hover {
+            background-color: #1a252f;
+        }
