@@ -377,3 +377,63 @@ footer {
             background-color: #bfa15f;
         }
 
+        DETALLE
+
+        .tabla-contenedor {
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            margin-bottom: 2.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+            font-size: 1rem;
+        }
+
+        thead {
+            background-color: #1a252f;
+            color: white;
+        }
+
+        th {
+            padding: 1.2rem;
+            text-align: left;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 1.2rem;
+            line-height: 1.6;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        td:first-child {
+            font-weight: 700;
+            color: #1a252f;
+            background: #fdfdfd;
+            border-right: 1px solid #e2e8f0;
+            width: 35%;
+        }
+
+        .volver {
+            display: block;
+            text-align: center;
+            background-color: #bfa15f;
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+            box-shadow: 0 4px 10px rgba(191, 161, 95, 0.2);
+        }
+
+        .volver:hover {
+            background-color: #1a252f;
+        }
