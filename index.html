@@ -179,7 +179,44 @@
         </nav>
     </header>
 
-    <main class="seccion" id="inicio">
+    <section class="galeria-seccion" id="galeria">
+        <div class="contenedor">
+            <div class="titulo-seccion">
+                <p class="subtitulo">Espacios históricos</p>
+                <h2>Galería del Castillo</h2>
+            </div>
+            <p class="galeria-introduccion">
+                Descubre algunos de los rincones más emblemáticos del castillo, desde salones nobles hasta patios y miradores con vistas inolvidables.
+            </p>
+            <div class="galeria">
+                <figure class="foto-castillo">
+                    <img src="documentación/documentos/trono.jpg" alt="Salón del Trono" loading="lazy">
+                    <figcaption>
+                        Salón del Trono
+                        <small>Arquitectura gótica y ambiente ceremonial</small>
+                    </figcaption>
+                </figure>
+
+                <figure class="foto-castillo">
+                    <img src="documentación/documentos/patio.jpg" alt="Patio de Armas" loading="lazy">
+                    <figcaption>
+                        Patio de Armas
+                        <small>Espacio abierto con historia y esplendor medieval</small>
+                    </figcaption>
+                </figure>
+
+                <figure class="foto-castillo">
+                    <img src="documentación/documentos/torre.jpg" alt="Torre del Homenaje" loading="lazy">
+                    <figcaption>
+                        Torre del Homenaje
+                        <small>Vistas panorámicas y encanto singular</small>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <main class="seccion" id="reserva">
         <div class="contenedor">
             <div class="tarjeta-principal">
                 <div class="titulo-seccion">
@@ -235,17 +272,6 @@
             </div>
         </section>
     </main>
-    <script>
-        const formularioReserva = document.getElementById('formulario-reserva');
-        let formularioCargado = false;
-
-        formularioReserva.addEventListener('load', () => {
-            if (formularioCargado) {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-            formularioCargado = true;
-        });
-    </script>
 </body>
 
 </html>
