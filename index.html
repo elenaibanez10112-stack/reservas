@@ -179,57 +179,16 @@
         </nav>
     </header>
 
-    <main>
-        <section class="galeria-seccion" id="galeria" aria-labelledby="titulo-galeria">
-            <div class="contenedor">
+    <main class="seccion" id="inicio">
+        <div class="contenedor">
+            <div class="tarjeta-principal">
                 <div class="titulo-seccion">
-                    <p class="subtitulo">Un espacio con historia</p>
-                    <h2 id="titulo-galeria">Descubre el castillo</h2>
-                    <p class="galeria-introduccion">Conoce algunos rincones del Castillo de La Guardia de Jaén antes de preparar tu reserva.</p>
+                    <p class="subtitulo">Gestión de Espacios Históricos</p>
+                    <h2>SOLICITUD DE RESERVA</h2>
                 </div>
-                <div class="galeria">
-                    <figure class="foto-castillo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Castillo_La_Guardia_Ja%C3%A9n_desde_Convento.jpg/1280px-Castillo_La_Guardia_Ja%C3%A9n_desde_Convento.jpg"
-                            alt="Vista general del Castillo de La Guardia de Jaén desde el antiguo convento de Santo Domingo"
-                            width="1200" height="900" loading="lazy" decoding="async">
-                        <figcaption>
-                            <span>Vista desde el antiguo convento</span>
-                            <small>Foto: Otiñar · <a href="https://commons.wikimedia.org/wiki/File:Castillo_La_Guardia_Ja%C3%A9n_desde_Convento.jpg" target="_blank" rel="noopener noreferrer">CC BY-SA 2.5</a></small>
-                        </figcaption>
-                    </figure>
-                    <figure class="foto-castillo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Castillo_de_La_Guardia_de_Ja%C3%A9n_02.JPG/1280px-Castillo_de_La_Guardia_de_Ja%C3%A9n_02.JPG"
-                            alt="Entrada de piedra decorada en el Castillo de La Guardia de Jaén"
-                            width="1200" height="1600" loading="lazy" decoding="async">
-                        <figcaption>
-                            <span>Detalle de la entrada</span>
-                            <small>Foto: Millars · <a href="https://commons.wikimedia.org/wiki/File:Castillo_de_La_Guardia_de_Ja%C3%A9n_02.JPG" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0 ES</a></small>
-                        </figcaption>
-                    </figure>
-                    <figure class="foto-castillo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Castillo_de_La_Guardia_de_Ja%C3%A9n_05.JPG/1280px-Castillo_de_La_Guardia_de_Ja%C3%A9n_05.JPG"
-                            alt="Otra vista del Castillo de La Guardia de Jaén"
-                            width="1200" height="900" loading="lazy" decoding="async">
-                        <figcaption>
-                            <span>Otra perspectiva del castillo</span>
-                            <small>Foto: Millars · <a href="https://commons.wikimedia.org/wiki/File:Castillo_de_La_Guardia_de_Ja%C3%A9n_05.JPG" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0 ES</a></small>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
-
-        <section class="seccion" id="reserva" aria-labelledby="titulo-reserva">
-            <div class="contenedor">
-                <div class="tarjeta-principal">
-                    <div class="titulo-seccion">
-                        <p class="subtitulo">Gestión de Espacios Históricos</p>
-                        <h2 id="titulo-reserva">SOLICITUD DE RESERVA</h2>
-                    </div>
-                    <iframe
-                        title="Formulario de solicitud de reserva del Castillo de La Guardia"
-                        src="https://docs.google.com/forms/d/e/1FAIpQLScrTi0ko1Dv-txa19lgSqE2Q246qPQ-njrxVTjhGB3G7_3R0Q/viewform?embedded=true"
-                        width="640" height="1612" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLScrTi0ko1Dv-txa19lgSqE2Q246qPQ-njrxVTjhGB3G7_3R0Q/viewform?embedded=true"
+                    width="640" height="1612" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
 
                     <!-- 
                     <form action="procesar.php" method="POST">
@@ -276,6 +235,17 @@
             </div>
         </section>
     </main>
+    <script>
+        const formularioReserva = document.getElementById('formulario-reserva');
+        let formularioCargado = false;
+
+        formularioReserva.addEventListener('load', () => {
+            if (formularioCargado) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            formularioCargado = true;
+        });
+    </script>
 </body>
 
 </html>
