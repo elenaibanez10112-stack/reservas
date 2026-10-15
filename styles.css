@@ -563,3 +563,115 @@ footer {
                 gap: 1rem;
             }
         }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        img,
+        iframe {
+            max-width: 100%;
+        }
+
+        @media (max-width: 767px) {
+            header {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 0.75rem;
+                padding: 1rem 1.25rem;
+            }
+
+            header h1 {
+                font-size: clamp(1.15rem, 5vw, 1.5rem);
+                letter-spacing: 0.04em;
+                line-height: 1.25;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.25rem 0.75rem;
+                width: 100%;
+            }
+
+            nav a {
+                margin: 0;
+                min-height: 44px;
+                padding: 0.55rem 0.25rem;
+            }
+
+            .seccion {
+                padding: 2rem 1rem;
+            }
+
+            .main-content,
+            .main-listado,
+            .main-detail {
+                margin: 1.5rem 1rem;
+                padding: 1.5rem;
+            }
+
+            .tarjeta-principal {
+                padding: 1.5rem;
+            }
+
+            .titulo-seccion h2 {
+                font-size: clamp(1.5rem, 6vw, 2rem);
+                letter-spacing: 0.04em;
+            }
+
+            .subtitulo {
+                font-size: 0.85rem;
+                letter-spacing: 0.08em;
+            }
+
+            .listado-grid {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 1.25rem;
+            }
+
+            .listado-grid > li {
+                min-width: 0;
+            }
+
+            .tarjeta > img {
+                display: block;
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+            }
+
+            .tarjeta-contenido {
+                padding: 1.25rem;
+            }
+
+            .informacion {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .galeria-seccion {
+                padding: 2.5rem 1rem;
+            }
+
+            footer {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .tarjeta-principal {
+                padding: 1.1rem;
+            }
+
+            .form-title {
+                font-size: 1.7rem;
+                letter-spacing: 0.04em;
+            }
+
+            .form-subtitle {
+                letter-spacing: 0.08em;
+            }
+        }
