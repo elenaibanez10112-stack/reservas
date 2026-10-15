@@ -509,6 +509,35 @@ footer {
             gap: 1.5rem;
         }
 
+        .reserva-contacto {
+            margin: 0 0 2rem;
+            padding-top: 1.25rem;
+            border-top: 2px solid #e5d7a2;
+            text-align: center;
+        }
+
+        .reserva-contacto h3 {
+            margin: 0 0 1rem;
+            color: #1a252f;
+            font-size: 1.5rem;
+        }
+
+        .reserva-contacto p {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+
+        .reserva-contacto a {
+            color: #66501b;
+            overflow-wrap: anywhere;
+        }
+
+        .reserva-contacto .visita-gratuita {
+            margin-top: 1rem;
+            color: #1a252f;
+            font-weight: 700;
+        }
+
         .foto-castillo {
             margin: 0;
             overflow: hidden;
