@@ -496,6 +496,24 @@ footer {
             font-size: 2.2rem;
         }
 
+        .informacion-visita {
+            margin-bottom: 1.5rem;
+            padding: 1rem 1.25rem;
+            border-left: 4px solid #bfa15f;
+            border-radius: 6px;
+            background-color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        .informacion-visita p {
+            margin: 0.25rem 0;
+        }
+
+        .informacion-visita a {
+            color: #1a252f;
+            overflow-wrap: anywhere;
+        }
+
         .galeria-introduccion {
             max-width: 650px;
             margin: 1rem auto 2rem;
