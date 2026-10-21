@@ -510,10 +510,14 @@ footer {
         }
 
         .foto-castillo:nth-child(4) {
-            grid-column: 2;
+            grid-column: 1;
         }
 
         .foto-castillo:nth-child(5) {
+            grid-column: 2;
+        }
+
+        .foto-castillo:nth-child(6) {
             grid-column: 3;
         }
 
@@ -565,7 +569,8 @@ footer {
             }
 
             .foto-castillo:nth-child(4),
-            .foto-castillo:nth-child(5) {
+            .foto-castillo:nth-child(5),
+            .foto-castillo:nth-child(6) {
                 grid-column: auto;
             }
 
