@@ -509,6 +509,14 @@ footer {
             gap: 1.5rem;
         }
 
+        .foto-castillo:nth-child(4) {
+            grid-column: 2;
+        }
+
+        .foto-castillo:nth-child(5) {
+            grid-column: 3;
+        }
+
         .foto-castillo {
             margin: 0;
             overflow: hidden;
@@ -554,6 +562,11 @@ footer {
             .galeria {
                 grid-template-columns: 1fr;
                 gap: 1rem;
+            }
+
+            .foto-castillo:nth-child(4),
+            .foto-castillo:nth-child(5) {
+                grid-column: auto;
             }
 
             .foto-castillo img {
